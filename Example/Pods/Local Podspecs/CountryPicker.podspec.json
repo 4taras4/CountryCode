@@ -1,0 +1,37 @@
+{
+  "name": "CountryPicker",
+  "version": "0.1.0",
+  "summary": "A short description of CountryPicker.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/CountryPicker",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "4taras4": "4taras4@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/CountryPicker.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": [
+    "CountryPicker/Classes/*",
+    "CountryPicker/Classes/CountryView.xib",
+    "CountryPicker/Classes/Flags.xcassets"
+  ],
+  "resource_bundles": {
+    "CountryPicker": [
+      "CountryPicker/Classes/CountryView.xib",
+      "CountryPicker/Classes/Flags.xcassets"
+    ]
+  },
+  "dependencies": {
+    "libPhoneNumber-iOS": [
+      "~> 0.8"
+    ]
+  }
+}

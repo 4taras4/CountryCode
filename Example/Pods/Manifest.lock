@@ -1,0 +1,19 @@
+PODS:
+  - CountryPicker (0.1.0):
+    - libPhoneNumber-iOS (~> 0.8)
+  - libPhoneNumber-iOS (0.9.1)
+
+DEPENDENCIES:
+  - CountryPicker (from `../`)
+
+EXTERNAL SOURCES:
+  CountryPicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CountryPicker: 29e5272e0cfa6bc2bee6b6ed88ad813b122b96c7
+  libPhoneNumber-iOS: 81ad1e6bfcf46e668636333269afbfe60399a55b
+
+PODFILE CHECKSUM: 38775ab6fc78bae49c2313bdb599a631f3b9f3c8
+
+COCOAPODS: 1.0.1
