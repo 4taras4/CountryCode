@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		66BC4B94CEBA9C6FCD845BDC /* Pods_CountryPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEBBCB0AB1C47770D11DB3CB /* Pods_CountryPicker_Example.framework */; };
 		942E17D0C53D5249D05C5FD5 /* Pods_CountryPicker_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C066DCA85E3996D289E8BA /* Pods_CountryPicker_Tests.framework */; };
+		F3423E381DF1D2C900E4EE8B /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3423E371DF1D2C900E4EE8B /* CountryView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		75C066DCA85E3996D289E8BA /* Pods_CountryPicker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryPicker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBBCB0AB1C47770D11DB3CB /* Pods_CountryPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3969A63DEB84EF6A5A0C06 /* Pods-CountryPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryPicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F3423E371DF1D2C900E4EE8B /* CountryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryView.xib; sourceTree = "<group>"; };
 		FAE7B2B83B39399CA782AC48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				F3423E371DF1D2C900E4EE8B /* CountryView.xib */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -253,6 +256,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				F3423E381DF1D2C900E4EE8B /* CountryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

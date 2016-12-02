@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CountryPicker: 29e5272e0cfa6bc2bee6b6ed88ad813b122b96c7
+  CountryPicker: 6a5496106eff21ba75e42d8d8315d17abf494a3f
   libPhoneNumber-iOS: 81ad1e6bfcf46e668636333269afbfe60399a55b
 
 PODFILE CHECKSUM: 38775ab6fc78bae49c2313bdb599a631f3b9f3c8
