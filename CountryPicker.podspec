@@ -29,7 +29,7 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://twitter.com/lulz_ua
   s.ios.deployment_target = '8.0'
 
-   s.source_files = ['CountryPicker/Classes/*']
+   s.source_files = 'CountryPicker/Classes/**.*'
   s.resource_bundles = {
     'CountryPicker' => ['CountryPicker/Classes/CountryView.xib'],
     'CountryPicker' => ['CountryPicker/Classes/Flags.xcassets']
