@@ -8,21 +8,21 @@
 
 import UIKit
 import CountryPicker
-class ViewController: UIViewController, CountryPhoneCodePickerDelegate  {
-    
+class ViewController: UIViewController, CountryPickerDelegate  {
+   
     @IBOutlet weak var picker: CountryPicker!
     @IBOutlet weak var code: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //Country codes
+        //get corrent country
         let locale = Locale.current
         let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
-        picker.countryPhoneCodeDelegate = self
+        //init Picker
+        picker.countryPickerDelegate = self
+        picker.showPhoneNumbers = true
         picker.setCountry(code!)
-        
     }
-    
+  
     // MARK: - CountryPhoneCodePicker Delegate
     
     
@@ -30,10 +30,11 @@ class ViewController: UIViewController, CountryPhoneCodePickerDelegate  {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryCountryWithName name: String, countryCode: String, phoneCode: String ) {
+    public func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
         code.text = phoneCode
         
     }
+
 }
 
 

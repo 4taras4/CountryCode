@@ -1,9 +1,9 @@
 {
   "name": "CountryPicker",
   "version": "0.1.0",
-  "summary": "A short description of CountryPicker.",
+  "summary": "Swift  CountryPicker.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/CountryPicker",
+  "homepage": "https://github.com/4taras4/CountryPicker",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,18 +12,18 @@
     "4taras4": "4taras4@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/CountryPicker.git",
+    "git": "https://github.com/4taras4/CountryPicker.git",
     "tag": "0.1.0"
   },
+  "social_media_url": "https://twitter.com/lulz_ua",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": [
-    "CountryPicker/Classes/*"
-  ],
+  "module_name": "CountryPicker",
+  "source_files": "CountryPicker/Classes/*",
   "resource_bundles": {
     "CountryPicker": [
-      "CountryPicker/Classes/Flags.xcassets"
+      "CountryPicker/Assets/CountryPicker.bundle/*"
     ]
   },
   "dependencies": {

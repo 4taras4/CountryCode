@@ -7,64 +7,52 @@
 //
 
 import UIKit
-import libPhoneNumber_iOS
+import CoreTelephony
 
-
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-    switch (lhs, rhs) {
-    case let (l?, r?):
-        return l < r
-    case (nil, _?):
-        return true
-    default:
-        return false
-    }
+@objc public protocol CountryPickerDelegate {
+    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage)
 }
 
-   public protocol CountryPhoneCodePickerDelegate {
-        func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryCountryWithName name: String, countryCode: String, phoneCode: String)
-    }
-
-
-    struct Country {
+struct Country {
     var code: String?
     var name: String?
     var phoneCode: String?
+    var flag: UIImage?
     
-    init(code: String?, name: String?, phoneCode: String?) {
+    init(code: String?, name: String?, phoneCode: String?, flag: UIImage?) {
         self.code = code
         self.name = name
         self.phoneCode = phoneCode
+        self.flag = flag
     }
 }
 
-   
+open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
     
-public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
+    var countries: [Country]!
+    open weak var countryPickerDelegate: CountryPickerDelegate?
+    open var showPhoneNumbers: Bool = true
     
-var countries: [Country]!
-   public var countryPhoneCodeDelegate: CountryPhoneCodePickerDelegate?
-    
-   public override init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-   public required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
     
-  public  func setup() {
-        super.dataSource = self;
-        super.delegate = self;
-        
+    func setup() {
         countries = countryNamesByCode()
+        
+        super.dataSource = self
+        super.delegate = self
     }
     
     // MARK: - Country Methods
     
-  public  func setCountry(_ code: String) {
+    open func setCountry(_ code: String) {
         var row = 0
         for index in 0..<countries.count {
             if countries[index].code == code {
@@ -74,60 +62,93 @@ var countries: [Country]!
         }
         
         self.selectRow(row, inComponent: 0, animated: true)
+        let country = countries[row]
+        if let countryPickerDelegate = countryPickerDelegate {
+            countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+        }
     }
     
-    func countryNamesByCode() -> [Country] {
-        var countries = [Country]()
-        
-        for code in Locale.isoRegionCodes {
-            let countryName = (Locale.current as NSLocale).displayName(forKey: NSLocale.Key.countryCode, value: code)
-            
-            let phoneNumberUtil = NBPhoneNumberUtil.sharedInstance()
-            let phoneCode: String? = "+\(phoneNumberUtil!.getCountryCode(forRegion: code)!)" as String?
-            
-            if phoneCode != "+0" {
-                let country = Country(code: code, name: countryName, phoneCode: phoneCode)
-                countries.append(country)
+    open func setCountryByPhoneCode(_ phoneCode: String) {
+        var row = 0
+        for index in 0..<countries.count {
+            if countries[index].phoneCode == phoneCode {
+                row = index
+                break
             }
         }
         
-//        countries = countries.sorted(by: { $0.name < $1.name })
+        self.selectRow(row, inComponent: 0, animated: true)
+        let country = countries[row]
+        if let countryPickerDelegate = countryPickerDelegate {
+            countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+        }
+    }
+    
+    // Populates the metadata from the included json file resource
+    
+    func countryNamesByCode() -> [Country] {
+        var countries = [Country]()
+        let frameworkBundle = Bundle(for: type(of: self))
+        guard let jsonPath = frameworkBundle.path(forResource: "CountryPicker.bundle/Data/countryCodes", ofType: "json"), let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
+            return countries
+        }
         
+        do {
+            if let jsonObjects = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.allowFragments) as? NSArray {
+                
+                for jsonObject in jsonObjects {
+                    
+                    guard let countryObj = jsonObject as? NSDictionary else {
+                        return countries
+                    }
+                    
+                    guard let code = countryObj["code"] as? String, let phoneCode = countryObj["dial_code"] as? String, let name = countryObj["name"] as? String else {
+                        return countries
+                    }
+                    
+                    let flag = UIImage(named: "CountryPicker.bundle/Images/\(code.uppercased())", in: Bundle(for: type(of: self)), compatibleWith: nil)
+                    
+                    let country = Country(code: code, name: name, phoneCode: phoneCode, flag: flag)
+                    countries.append(country)
+                }
+                
+            }
+        } catch {
+            return countries
+        }
         return countries
     }
     
     // MARK: - Picker Methods
-
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    
+    open func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    open func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return countries.count
     }
     
-   public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    open func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var resultView: CountryView
         
         if view == nil {
-            resultView = (Bundle.main.loadNibNamed("CountryView", owner: self, options: nil)?[0] as! CountryView)
+            resultView = CountryView()
         } else {
             resultView = view as! CountryView
         }
         
         resultView.setup(countries[row])
-        
+        if !showPhoneNumbers {
+            resultView.countryCodeLabel.isHidden = true
+        }
         return resultView
     }
     
-    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    open func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let country = countries[row]
-        if let countryPhoneCodeDelegate = countryPhoneCodeDelegate {
-            countryPhoneCodeDelegate.countryPhoneCodePicker(self, didSelectCountryCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!)
-            print("\(country.phoneCode!)")
+        if let countryPickerDelegate = countryPickerDelegate {
+            countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
         }
     }
 }
-
-
-
