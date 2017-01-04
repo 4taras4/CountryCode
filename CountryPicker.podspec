@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
 TODO: CountryCode Picker
                        DESC
 
-  s.homepage         = 'https://github.com/4taras4/CountryPicker'
+  s.homepage         = 'https://github.com/4taras4/CountryCode'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '4taras4' => '4taras4@gmail.com' }
-  s.source           = { :git => 'https://github.com/4taras4/CountryPicker.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/4taras4/CountryCode.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/lulz_ua'
   s.ios.deployment_target = '8.0'
   s.module_name  = 'CountryPicker'

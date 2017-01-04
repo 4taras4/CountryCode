@@ -1,8 +1,8 @@
 {
   "name": "CountryPicker",
-  "version": "0.1.0",
-  "summary": "Swift  CountryPicker.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.4.0",
+  "summary": "Swift CountryPicker",
+  "description": "TODO: CountryCode Picker",
   "homepage": "https://github.com/4taras4/CountryPicker",
   "license": {
     "type": "MIT",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/4taras4/CountryPicker.git",
-    "tag": "0.1.0"
+    "tag": "1.4.0"
   },
   "social_media_url": "https://twitter.com/lulz_ua",
   "platforms": {
