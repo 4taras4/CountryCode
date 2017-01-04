@@ -1,21 +1,12 @@
 PODS:
-  - CountryPicker (1.4.0)
+  - CountryPickerSwift (1.4.0)
 
 DEPENDENCIES:
-  - CountryPicker (from `https://github.com/4taras4/CountryCode.git`)
-
-EXTERNAL SOURCES:
-  CountryPicker:
-    :git: https://github.com/4taras4/CountryCode.git
-
-CHECKOUT OPTIONS:
-  CountryPicker:
-    :commit: 5d75e1b2d2092248c65541d2675c651454bbe837
-    :git: https://github.com/4taras4/CountryCode.git
+  - CountryPickerSwift
 
 SPEC CHECKSUMS:
-  CountryPicker: a3d3fa13e77eff933c2e4e0ffd252fdd8ea107c8
+  CountryPickerSwift: f6a2202071f2627ea6b22f7bc6b130c6582efca3
 
-PODFILE CHECKSUM: 964e5852a8007ea67e4f47d937097940d90aa046
+PODFILE CHECKSUM: a4937e3cbd9f1f80e2c085f7a2daaa3d02a45546
 
 COCOAPODS: 1.1.1

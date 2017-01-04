@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## CountryPicker
+## CountryPickerSwift
 
 Copyright (c) 2016 4taras4 <4taras4@gmail.com>
 

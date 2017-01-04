@@ -51,7 +51,7 @@ CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CountryPicker', :git => 'https://github.com/4taras4/CountryCode.git' 
+pod 'CountryPicker, :git => 'https://github.com/4taras4/CountryCode.git', :tag => '1.4.0'  
 ```
 
 ## Author

@@ -3,7 +3,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'CountryPicker_Example' do
-    pod 'CountryPicker', :git => 'https://github.com/4taras4/CountryCode.git'
+    pod 'CountryPickerSwift'
    #pod 'CountryPicker', :path => '../'
   target 'CountryPicker_Tests' do
     inherit! :search_paths

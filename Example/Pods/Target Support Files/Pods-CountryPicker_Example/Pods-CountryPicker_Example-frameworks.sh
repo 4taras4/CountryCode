@@ -84,8 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CountryPicker/CountryPicker.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CountryPickerSwift/CountryPicker.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/CountryPicker/CountryPicker.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/CountryPickerSwift/CountryPicker.framework"
 fi
