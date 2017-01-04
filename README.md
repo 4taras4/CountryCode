@@ -3,7 +3,6 @@
 [![CI Status](http://img.shields.io/travis/4taras4/CountryPicker.svg?style=flat)](https://travis-ci.org/4taras4/CountryCode)
 [![Platform](https://img.shields.io/cocoapods/p/CountryPicker.svg?style=flat)](https://cocoapods.org/pods/CountryPickerSwift)
 [![Swift version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]()
-[![Release][release-svg]][release-link]
 
 Picker code  Swift 3 .
 
@@ -15,13 +14,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 
 Make your UIPickerView a class of CountryPicker, set its countryPickerDelegate and implement its countryPhoneCodePicker method.
-
-See the following example:
-
+Example:
 ```
+import CountryPicker
+
 class ViewController: UIViewController, CountryPickerDelegate {
 
-    @IBOutlet weak var countryPicker: CountryPicker!
+    @IBOutlet weak var picker: CountryPicker!
    
     
     override func viewDidLoad() {
