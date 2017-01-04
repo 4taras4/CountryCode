@@ -33,6 +33,6 @@ TODO: CountryCode Picker
     'CountryPicker' => ['CountryPicker/Assets/CountryPicker.bundle/*']
   }
 
-  s.dependency 'libPhoneNumber-iOS', '~> 0.8'
+  #s.dependency 'libPhoneNumber-iOS', '~> 0.8'
 
 end
