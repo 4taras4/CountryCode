@@ -21,19 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="CountryView" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-EN-grO" customClass="CountryPicker" customModule="CountryPicker">
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="CountryView" translatesAutoresizingMaskIntoConstraints="NO" id="1pu-EN-grO" customClass="CountryPicker" customModule="CountryPicker">
                                 <rect key="frame" x="0.0" y="451" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V95-sy-MrT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V95-sy-MrT">
                                 <rect key="frame" x="166" y="351" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1pu-EN-grO" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="NQw-PC-nXK"/>
+                            <constraint firstItem="1pu-EN-grO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Qt8-3h-V4j"/>
+                            <constraint firstItem="V95-sy-MrT" firstAttribute="centerX" secondItem="1pu-EN-grO" secondAttribute="centerX" id="lUF-5O-rSd"/>
+                            <constraint firstItem="1pu-EN-grO" firstAttribute="top" secondItem="V95-sy-MrT" secondAttribute="bottom" constant="79" id="tPj-6F-F7q"/>
+                            <constraint firstAttribute="trailing" secondItem="1pu-EN-grO" secondAttribute="trailing" id="xhB-bj-u6s"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="code" destination="V95-sy-MrT" id="KhT-Qn-Y9Z"/>

@@ -9,6 +9,11 @@ language: objective-c
 # before_install:
 # - gem install cocoapods # Since Travis is not always on latest version
 # - pod install --project-directory=Example
+env: scheme='Siesta iOS' platform='iOS Simulator,OS=10.0,name=iPhone SE',
+group: stable,
+dist: osx,
 script:
-- set -o pipefail && xcodebuild test -workspace Example/CountryPicker.xcworkspace -scheme CountryPicker-Example -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO | xcpretty
+- set -o pipefail && xcodebuild test 
+-workspace Example/CountryPicker.xcworkspace 
+-scheme CountryPicker-Example 
 - pod lib lint
