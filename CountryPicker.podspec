@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'CountryPicker'
   s.version          = '1.4.0'
-  s.summary          = 'A short description of CountryPicker.'
+  s.summary          = 'Swift CountryPicker'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,8 +18,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
-  DESC
+TODO: CountryCode Picker
+                       DESC
 
   s.homepage         = 'https://github.com/4taras4/CountryPicker'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
@@ -33,6 +33,6 @@ TODO: Add long description of the pod here.
     'CountryPicker' => ['CountryPicker/Assets/CountryPicker.bundle/*']
   }
 
-   s.dependency 'libPhoneNumber-iOS', '~> 0.8'
+  s.dependency 'libPhoneNumber-iOS', '~> 0.8'
 
 end
