@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CountryPicker'
+  s.name             = 'CountryPickerSwift'
   s.version          = '1.4.0'
   s.summary          = 'Swift CountryPicker'
 
