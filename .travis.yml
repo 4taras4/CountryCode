@@ -1,19 +1,31 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
-osx_image: xcode7.3
-language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+language: objective-c,
+os: osx,
+rvm:
+  - 2.2
+osx_image: xcode8,
 env: scheme='Siesta iOS' platform='iOS Simulator,OS=10.0,name=iPhone SE',
 group: stable,
 dist: osx,
+xcode_workspace: "../Example/CountryPicker.xcworkspace"
+xcode_scheme: CountryPicker-Example
+podfile: "./Example/Podfile"
+before_install:
+- gem install cocoapods
+- which pod
+- pod --version
+- gem install xcpretty
+
 script:
-- set -o pipefail && xcodebuild test 
--workspace Example/CountryPicker.xcworkspace 
--scheme CountryPicker-Example 
-- pod lib lint
+- set -o pipefail
+#- xcodebuild clean build -project Hyber.xcodeproj -scheme "Hyber-Example" -sdk iphonesimulator
+#- xcodebuild -version
+#- xcodebuild -showsdks
+
+# Run `pod lib lint` if specified
+- if [ $POD_LINT == "YES" ]; then
+   pod lib lint;
+   fi
+
+notifications:
+  slack:
+    secure: UdQT7LK2lKRjz0tbgU0K9x/HJSTseQ1yzBMEiEhbkTTxh/jDl5s7XcruBQOAdB+F2zThhJizdlV1ppoCS76JNnwnzhuX8FBSiA18t3HcyMrp9v/ctQ/Y7V8JVFME4Ngzmp7gmklgy40p+oLTE4CwLO2ZV+1WJWr/HdfSpMiI4LG2CI+PGhBjjgARkmMNgtrZfpW/+L9P/NlZ8ymZkGWcjVadh8/BN3wp1PvhNNrJ+aBSu05Jv+UanvjfTKlmH3d/rqJqidHzZF3n+NUgFaMNAKS2siGlG+zQUcQ1X0+VtObj1S6a1B8KMss9yKQwia85DV5pJ7qxIUBtQqqDd/LIAhRmwF5UYx76/Gh+73WEAbC4TWYQf0zK6L+ASzUROIfj9O0J1ouyBP7UNYfiX8VlEFD+A0giKw2m4bl4VVLGcd9mka0QU5CKgplw4fHjzrGcKilzX2f+COzdoOYfutq6IDpD6A9KLeSjlmt4tduEZAZMm8Vm8r5uu7Q0hGumNJ6zMoROaJpi9CuU3Trt6C2whlXqFZF1NimNDsL23risOnq3CE8MO/XZeRNtTaXy1nco81yrqOqeaPJF2hzPJZvJ650kQC5r6OkzMP0OE3uEN/mX008mLCWyfXTRsEUdhHCY4GiAkaAthidMKvSKrKi05bn3dUT7O3p9ThHFKP1o+7I=
