@@ -1,7 +1,7 @@
 # CountryPicker
 
-[![CI Status](http://img.shields.io/travis/4taras4/CountryPicker.svg?style=flat)](https://travis-ci.org/4taras4/CountryPicker)
-[![Platform](https://img.shields.io/cocoapods/p/CountryPicker.svg?style=flat)](http://cocoapods.org/pods/CountryPicker)
+[![CI Status](http://img.shields.io/travis/4taras4/CountryPicker.svg?style=flat)](https://travis-ci.org/4taras4/CountryCode)
+[![Platform](https://img.shields.io/cocoapods/p/CountryPicker.svg?style=flat)](https://cocoapods.org/pods/CountryPickerSwift)
 [![Swift version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]()
 [![Release][release-svg]][release-link]
 
