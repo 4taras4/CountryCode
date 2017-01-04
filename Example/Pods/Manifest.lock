@@ -1,19 +1,21 @@
 PODS:
-  - CountryPicker (1.4.0):
-    - libPhoneNumber-iOS (~> 0.8)
-  - libPhoneNumber-iOS (0.9.2)
+  - CountryPicker (1.4.0)
 
 DEPENDENCIES:
-  - CountryPicker (from `../`)
+  - CountryPicker (from `https://github.com/4taras4/CountryCode.git`)
 
 EXTERNAL SOURCES:
   CountryPicker:
-    :path: "../"
+    :git: https://github.com/4taras4/CountryCode.git
+
+CHECKOUT OPTIONS:
+  CountryPicker:
+    :commit: 5d75e1b2d2092248c65541d2675c651454bbe837
+    :git: https://github.com/4taras4/CountryCode.git
 
 SPEC CHECKSUMS:
-  CountryPicker: 23029f7a9e9e029ac6fb461df40fe08342dbaae3
-  libPhoneNumber-iOS: a8bffdec18c37728360f6771fe021302f1e0b497
+  CountryPicker: a3d3fa13e77eff933c2e4e0ffd252fdd8ea107c8
 
-PODFILE CHECKSUM: 4271a905281db3350fa0b27ddb387058967ddfbb
+PODFILE CHECKSUM: 964e5852a8007ea67e4f47d937097940d90aa046
 
 COCOAPODS: 1.1.1

@@ -3,7 +3,7 @@
   "version": "1.4.0",
   "summary": "Swift CountryPicker",
   "description": "TODO: CountryCode Picker",
-  "homepage": "https://github.com/4taras4/CountryPicker",
+  "homepage": "https://github.com/4taras4/CountryCode",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "4taras4": "4taras4@gmail.com"
   },
   "source": {
-    "git": "https://github.com/4taras4/CountryPicker.git",
+    "git": "https://github.com/4taras4/CountryCode.git",
     "tag": "1.4.0"
   },
   "social_media_url": "https://twitter.com/lulz_ua",
@@ -24,11 +24,6 @@
   "resource_bundles": {
     "CountryPicker": [
       "CountryPicker/Assets/CountryPicker.bundle/*"
-    ]
-  },
-  "dependencies": {
-    "libPhoneNumber-iOS": [
-      "~> 0.8"
     ]
   }
 }
