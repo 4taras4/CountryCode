@@ -61,3 +61,4 @@ pod 'CountryPicker', :git => 'https://github.com/4taras4/CountryCode.git'
 ## License
 
 CountryPicker is available under the MIT license. See the LICENSE file for more info.
+[release-link]: https://github.com/Incuube/Hyber-SDK-iOS/releases/latest
