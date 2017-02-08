@@ -22,7 +22,7 @@ script:
 #- xcodebuild -showsdks
 
 # Run `pod lib lint` if specified
-- pod lib lint --allow-warning
+- pod lib lint --allow-warnings
 
 notifications:
   slack:
