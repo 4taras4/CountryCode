@@ -50,7 +50,7 @@ CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CountryPickerSwift'
+pod 'CountryPickerSwift'  :tag => '1.4.1'
 ```
 
 ## Author
