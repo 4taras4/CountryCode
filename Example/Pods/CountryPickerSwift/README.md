@@ -1,9 +1,8 @@
 # CountryPicker
 
-[![CI Status](http://img.shields.io/travis/4taras4/CountryPicker.svg?style=flat)](https://travis-ci.org/4taras4/CountryPicker)
-[![Version](https://img.shields.io/cocoapods/v/CountryPicker.svg?style=flat)](http://cocoapods.org/pods/CountryPicker)
-[![License](https://img.shields.io/cocoapods/l/CountryPicker.svg?style=flat)](http://cocoapods.org/pods/CountryPicker)
-[![Platform](https://img.shields.io/cocoapods/p/CountryPicker.svg?style=flat)](http://cocoapods.org/pods/CountryPicker)
+[![Build Status](https://travis-ci.org/4taras4/CountryCode.svg?branch=master)](https://travis-ci.org/4taras4/CountryCode)
+[![Platform](https://img.shields.io/cocoapods/p/CountryPicker.svg?style=flat)](https://cocoapods.org/pods/CountryPickerSwift)
+[![Swift version](https://img.shields.io/badge/Swift-3.0.x-orange.svg)]()
 
 Picker code  Swift 3 .
 
@@ -15,13 +14,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 
 Make your UIPickerView a class of CountryPicker, set its countryPickerDelegate and implement its countryPhoneCodePicker method.
-
-See the following example:
-
+Example:
 ```
+import CountryPicker
+
 class ViewController: UIViewController, CountryPickerDelegate {
 
-    @IBOutlet weak var countryPicker: CountryPicker!
+    @IBOutlet weak var picker: CountryPicker!
    
     
     override func viewDidLoad() {
@@ -37,7 +36,7 @@ class ViewController: UIViewController, CountryPickerDelegate {
     }
     
     // a picker item was selected
-    func countryPhoneCodePicker(picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
+    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
        //pick up anythink
       code.text = phoneCode
     }
@@ -51,7 +50,7 @@ CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'CountryPicker, :git => 'https://github.com/4taras4/CountryCode.git', :tag => '1.4.0'  
+pod 'CountryPickerSwift'  :tag => '1.4.1'
 ```
 
 ## Author
@@ -61,3 +60,4 @@ pod 'CountryPicker, :git => 'https://github.com/4taras4/CountryCode.git', :tag =
 ## License
 
 CountryPicker is available under the MIT license. See the LICENSE file for more info.
+[release-link]: https://github.com/4taras4/CountryCode/releases/latest
