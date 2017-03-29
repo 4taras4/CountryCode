@@ -3,8 +3,8 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'CountryPicker_Example' do
-    pod 'CountryPickerSwift', :tag => '1.4.1'
-   #pod 'CountryPicker', :path => '../'
+#    pod 'CountryPickerSwift'
+    pod 'CountryPickerSwift', :path => '../'
   target 'CountryPicker_Tests' do
     inherit! :search_paths
 
