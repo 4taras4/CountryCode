@@ -8,6 +8,7 @@
 
 import UIKit
 import CountryPicker
+
 class ViewController: UIViewController, CountryPickerDelegate  {
    
     @IBOutlet weak var picker: CountryPicker!
@@ -32,7 +33,6 @@ class ViewController: UIViewController, CountryPickerDelegate  {
     }
     public func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
         code.text = phoneCode
-        
     }
 
 }

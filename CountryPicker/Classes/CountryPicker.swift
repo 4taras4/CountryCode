@@ -8,17 +8,32 @@
 
 import UIKit
 import CoreTelephony
-
+/// CountryPickerDelegate
+///
+/// - Parameters:
+///   - picker: UIPickerVIew
+///   - name: Name of selected element
+///   - countryCode: Country code shortcut
+///   - phoneCode: Phone digit code of country
+///   - flag: Flag of country
 @objc public protocol CountryPickerDelegate {
-    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage)
+       func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage)
 }
 
+/// Structure of country code picker
 struct Country {
     var code: String?
     var name: String?
     var phoneCode: String?
     var flag: UIImage?
     
+    /// Country code initialization
+    ///
+    /// - Parameters:
+    ///   - code: String
+    ///   - name: String
+    ///   - phoneCode: String
+    ///   - flag: UIImage
     init(code: String?, name: String?, phoneCode: String?, flag: UIImage?) {
         self.code = code
         self.name = name
@@ -33,6 +48,9 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     open weak var countryPickerDelegate: CountryPickerDelegate?
     open var showPhoneNumbers: Bool = true
     
+    /// init
+    ///
+    /// - Parameter frame: initialization
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -43,6 +61,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         setup()
     }
     
+    /// Setup country code picker
     func setup() {
         countries = countryNamesByCode()
         
@@ -52,6 +71,9 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     
     // MARK: - Country Methods
     
+    /// setCountry
+    ///
+    /// - Parameter code: selected country
     open func setCountry(_ code: String) {
         var row = 0
         for index in 0..<countries.count {
@@ -68,6 +90,9 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+    /// setCountryByPhoneCode
+    /// Init with phone code
+    /// - Parameter phoneCode: String
     open func setCountryByPhoneCode(_ phoneCode: String) {
         var row = 0
         for index in 0..<countries.count {
@@ -86,6 +111,9 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     
     // Populates the metadata from the included json file resource
     
+    /// sorted array with data
+    ///
+    /// - Returns: sorted array with all information phone, flag, name
     func countryNamesByCode() -> [Country] {
         var countries = [Country]()
         let frameworkBundle = Bundle(for: type(of: self))
@@ -125,10 +153,24 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         return 1
     }
     
+    /// pickerView
+    ///
+    /// - Parameters:
+    ///   - pickerView: CountryPicker
+    ///   - component: Int
+    /// - Returns: counts of array's elements
     open func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return countries.count
     }
     
+    /// PickerView
+    /// Initialization of Country pockerView
+    /// - Parameters:
+    ///   - pickerView: UIPickerView
+    ///   - row: row
+    ///   - component: count of countries
+    ///   - view: UIView
+    /// - Returns: UIView
     open func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var resultView: CountryView
         
@@ -145,6 +187,12 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         return resultView
     }
     
+    /// Function for handing data from UIPickerView
+    ///
+    /// - Parameters:
+    ///   - pickerView: CountryPickerView
+    ///   - row: selectedRow
+    ///   - component: description
     open func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let country = countries[row]
         if let countryPickerDelegate = countryPickerDelegate {

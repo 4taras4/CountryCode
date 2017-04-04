@@ -14,6 +14,9 @@ class NibLoadingView: UIView {
     
     @IBOutlet weak var view: UIView!
     
+    /// Init
+    ///
+    /// - Parameter frame: frame descript
     override init(frame: CGRect) {
         super.init(frame: frame)
         nibSetup()
@@ -24,6 +27,7 @@ class NibLoadingView: UIView {
         nibSetup()
     }
     
+    /// Setup XIB
     fileprivate func nibSetup() {
         backgroundColor = UIColor.clear
         
@@ -35,6 +39,9 @@ class NibLoadingView: UIView {
         addSubview(view)
     }
     
+    /// Load XIB
+    ///
+    /// - Returns: XIBView
     fileprivate func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
@@ -47,6 +54,7 @@ class NibLoadingView: UIView {
 
 
 
+/// Load country view from XIB file
 class CountryView: NibLoadingView {
     
     @IBOutlet weak var flagImageView: UIImageView!
@@ -61,6 +69,9 @@ class CountryView: NibLoadingView {
         super.init(coder: aDecoder)
     }
     
+    /// Setup custop pickerView to UIPickerView
+    /// initialized by country code
+    /// - Parameter country: Countrycode
     func setup(_ country: Country) {
         if let flag = country.flag {
             flagImageView.layer.borderWidth = 0.5
