@@ -71,7 +71,7 @@ let package = Package(
     name: "YOUR_PROJECT_NAME",
     targets: [],
     dependencies: [
-        .Package(url: "git@github.com:4taras4/CountryCode.git",
+        .Package(url: "git@github.com:4taras4/CountryCode.git")
     ]
 )
 ```
