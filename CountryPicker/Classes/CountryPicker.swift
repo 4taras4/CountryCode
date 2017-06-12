@@ -25,7 +25,7 @@ struct Country {
     var code: String?
     var name: String?
     var phoneCode: String?
-    var flag: UIImage?
+    var flagName: String
     
     /// Country code initialization
     ///
@@ -33,12 +33,16 @@ struct Country {
     ///   - code: String
     ///   - name: String
     ///   - phoneCode: String
-    ///   - flag: UIImage
-    init(code: String?, name: String?, phoneCode: String?, flag: UIImage?) {
+    ///   - flagName: String
+    init(code: String?, name: String?, phoneCode: String?, flagName: String) {
         self.code = code
         self.name = name
         self.phoneCode = phoneCode
-        self.flag = flag
+        self.flagName = flagName
+    }
+
+    var flag: UIImage? {
+        return UIImage(named: flagName, in: Bundle(for: CountryPicker.self), compatibleWith: nil)
     }
 }
 
@@ -134,9 +138,9 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
                         return countries
                     }
                     
-                    let flag = UIImage(named: "CountryPicker.bundle/Images/\(code.uppercased())", in: Bundle(for: type(of: self)), compatibleWith: nil)
-                    
-                    let country = Country(code: code, name: name, phoneCode: phoneCode, flag: flag)
+                    let flagName = "CountryPicker.bundle/Images/\(code.uppercased())"
+
+                    let country = Country(code: code, name: name, phoneCode: phoneCode, flagName: flagName)
                     countries.append(country)
                 }
                 
