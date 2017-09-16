@@ -4,7 +4,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/CountryPicker.svg?style=flat)](https://cocoapods.org/pods/CountryPickerSwift)
 [![Swift version](https://img.shields.io/badge/Swift-3.1-orange.svg)]()
 
-Picker code  Swift 3 .
+Picker code  Swift 3 / 4.
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first. 
@@ -50,11 +50,11 @@ class ViewController: UIViewController, CountryPickerDelegate {
 
 CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
 
-*Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.5'`
+*Swift 4  (Xcode 9)*  `pod 'CountryPickerSwift', '1.5'`
 
 *Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.4.5'`
 
-*Swift 3.0+ (Xcode 8.3)*  `pod 'CountryPickerSwift', '1.4.4'`
+*Swift 3.0+ (Xcode 8)*  `pod 'CountryPickerSwift', '1.4.4'`
 
 it, simply add the following line to your 'Podfile':
 
