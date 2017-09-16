@@ -49,6 +49,13 @@ class ViewController: UIViewController, CountryPickerDelegate {
 #### CocoaPods (iOS 8+, OS X 10.9+)
 
 CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
+
+*Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.5'`
+
+*Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.4.5'`
+
+*Swift 3.0+ (Xcode 8.3)*  `pod 'CountryPickerSwift', '1.4.4'`
+
 it, simply add the following line to your 'Podfile':
 
 ```ruby
