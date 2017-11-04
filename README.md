@@ -100,5 +100,5 @@ CountryPicker is available under the MIT license. See the LICENSE file for more 
 
 ## Donate
 
- Donation BitCoin 141Q3KduSqvTtMbrU6YouSErDBh1SpiLrL 
+ Donation Bitcoin 141Q3KduSqvTtMbrU6YouSErDBh1SpiLrL 
 
