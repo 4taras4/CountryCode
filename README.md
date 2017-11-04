@@ -96,3 +96,9 @@ To use this library in your project manually just drag and drop CountryPicker fo
 
 CountryPicker is available under the MIT license. See the LICENSE file for more info.
 [release-link](https://github.com/4taras4/CountryCode/releases/latest)
+
+
+## Donate
+
+ Donation BitCoin 141Q3KduSqvTtMbrU6YouSErDBh1SpiLrL 
+
