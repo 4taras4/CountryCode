@@ -48,15 +48,16 @@ public struct Country {
     }
 }
 
-open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource {
+open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
 
     lazy var countries: [Country] = {
         var allCountries: [Country] = CountryPicker.countryNamesByCode()
         if let display = displayOnlyCountriesWithCodes {
             let filtered = allCountries.filter { country in return display.contains(where: { code in return country.code == code }) }
+            return filtered
         }
         return allCountries
-    }
+    }()
     open var displayOnlyCountriesWithCodes: [String]?
     open weak var countryPickerDelegate: CountryPickerDelegate?
     open var showPhoneNumbers: Bool = false
@@ -84,6 +85,11 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     func setup() {
         super.dataSource = self
         super.delegate = self
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(pickerTapped(tapRecognizer:)))
+        tap.cancelsTouchesInView = false
+        tap.delegate = self
+        self.addGestureRecognizer(tap)
     }
 
     // MARK: - Country Methods
@@ -216,4 +222,21 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
             countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
         }
     }
+
+    @objc
+    func pickerTapped(tapRecognizer: UITapGestureRecognizer) {
+        if (tapRecognizer.state == .ended) {
+            let rowHeight: CGFloat = self.rowSize(forComponent: 0).height
+            let selectedRowFrame: CGRect = self.bounds.insetBy(dx: 0, dy: (self.frame.height - rowHeight) / 2.0)
+            let userTappedOnSelectedRow = selectedRowFrame.contains(tapRecognizer.location(in: self))
+            if (userTappedOnSelectedRow) {
+                let selectedRow = self.pickerView(self, didSelectRow: 0, inComponent: 0)
+            }
+        }
+    }
+
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool{
+        return true
+    }
+
 }
