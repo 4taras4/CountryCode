@@ -61,6 +61,12 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     open weak var countryPickerDelegate: CountryPickerDelegate?
     open var showPhoneNumbers: Bool = false
 
+
+    init() {
+        super.init(frame: .zero)
+        setup()
+    }
+
     /// init
     ///
     /// - Parameter frame: initialization
