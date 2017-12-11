@@ -57,7 +57,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         }
         return allCountries
     }
-    var displayOnlyCountriesWithCodes: [String]?
+    open var displayOnlyCountriesWithCodes: [String]?
     open weak var countryPickerDelegate: CountryPickerDelegate?
     open var showPhoneNumbers: Bool = false
 
@@ -82,8 +82,6 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
 
     /// Setup country code picker
     func setup() {
-        countries = CountryPicker.countryNamesByCode()
-
         super.dataSource = self
         super.delegate = self
     }
