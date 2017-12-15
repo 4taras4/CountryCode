@@ -19,7 +19,7 @@ import CoreTelephony
 ///   - phoneCode: Phone digit code of country
 ///   - flag: Flag of country
 @objc public protocol CountryPickerDelegate {
-    func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage)
+   @objc func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage)
 }
 
 /// Structure of country code picker
@@ -58,9 +58,9 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         }
         return allCountries
     }()
-    open var displayOnlyCountriesWithCodes: [String]?
-    open weak var countryPickerDelegate: CountryPickerDelegate?
-    open var showPhoneNumbers: Bool = false
+  @objc open var displayOnlyCountriesWithCodes: [String]?
+  @objc open weak var countryPickerDelegate: CountryPickerDelegate?
+  @objc open var showPhoneNumbers: Bool = false
 
 
     init() {
@@ -216,7 +216,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     ///   - pickerView: CountryPickerView
     ///   - row: selectedRow
     ///   - component: description
-    open func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+   @objc open func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let country = countries[row]
         if let countryPickerDelegate = countryPickerDelegate {
             countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)

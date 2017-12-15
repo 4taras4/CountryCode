@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ExampleObjective/ExampleObjective.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:CountryPicker.xcodeproj">
    </FileRef>
    <FileRef
