@@ -5,6 +5,7 @@
 [![Swift version](https://img.shields.io/badge/Swift-3.1-orange.svg)](https://cocoapods.org/pods/CountryPickerSwift)
 [![Swift version](https://img.shields.io/badge/Swift-4-orange.svg)](https://cocoapods.org/pods/CountryPickerSwift)
 [![Beerpay](https://beerpay.io/4taras4/CountryCode/badge.svg?style=flat)](https://beerpay.io/4taras4/CountryCode)
+
 Picker code  Swift 3 / 4.
 
 ## Example
@@ -53,7 +54,7 @@ class ViewController: UIViewController, CountryPickerDelegate {
 
 CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
 
-*Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.4.5'`
+*Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.7'`
 
 *Swift 3.0+ (Xcode 8)*  `pod 'CountryPickerSwift', '1.4.4'`
 
