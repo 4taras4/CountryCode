@@ -49,16 +49,21 @@ public struct Country {
 }
 
 open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
+    @objc open var displayOnlyCountriesWithCodes: [String]?
+    @objc open var exeptCountriesWithCodes: [String]?
 
-    lazy var countries: [Country] = {
-        var allCountries: [Country] = CountryPicker.countryNamesByCode()
+    var countries: [Country] {
+        let allCountries: [Country] = CountryPicker.countryNamesByCode()
         if let display = displayOnlyCountriesWithCodes {
-            let filtered = allCountries.filter { country in return display.contains(where: { code in return country.code == code }) }
+            let filtered = allCountries.filter { country in display.contains(where: { code in country.code == code }) }
+            return filtered
+        }
+        if let display = exeptCountriesWithCodes {
+            let filtered = allCountries.filter { country in display.contains(where: { code in country.code != code }) }
             return filtered
         }
         return allCountries
-    }()
-  @objc open var displayOnlyCountriesWithCodes: [String]?
+    }
   @objc open weak var countryPickerDelegate: CountryPickerDelegate?
   @objc open var showPhoneNumbers: Bool = false
 

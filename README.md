@@ -30,7 +30,8 @@ class ViewController: UIViewController, CountryPickerDelegate {
         let locale = Locale.current
         let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
         //init Picker
-        picker.displayOnlyCountriesWithCodes = ["DK", "SE", "NO", "DE"] //Optional, must be set before showing 
+        picker.displayOnlyCountriesWithCodes = ["DK", "SE", "NO", "DE"] //display only
+        picker.exeptCountriesWithCodes = ["RU"] //exept country
         picker.countryPickerDelegate = self
         picker.showPhoneNumbers = true
         picker.setCountry(code!)
