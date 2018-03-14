@@ -103,3 +103,8 @@ CountryPicker is available under the MIT license. See the LICENSE file for more 
 
  Donation Bitcoin 141Q3KduSqvTtMbrU6YouSErDBh1SpiLrL 
 
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/4taras4/CountryCode/badge.svg?style=beer-square)](https://beerpay.io/4taras4/CountryCode)  [![Beerpay](https://beerpay.io/4taras4/CountryCode/make-wish.svg?style=flat-square)](https://beerpay.io/4taras4/CountryCode?focus=wish)
