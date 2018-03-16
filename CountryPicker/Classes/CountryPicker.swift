@@ -66,6 +66,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     }
   @objc open weak var countryPickerDelegate: CountryPickerDelegate?
   @objc open var showPhoneNumbers: Bool = false
+    open var theme: CountryViewTheme?
 
 
     init() {
@@ -203,7 +204,11 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         var resultView: CountryView
 
         if view == nil {
-            resultView = CountryView()
+            if let theme = self.theme {
+                resultView = CountryView(theme: theme)
+            } else {
+                resultView = CountryView()
+            }
         } else {
             resultView = view as! CountryView
         }
