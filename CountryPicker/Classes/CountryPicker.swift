@@ -66,16 +66,10 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     }
   @objc open weak var countryPickerDelegate: CountryPickerDelegate?
   @objc open var showPhoneNumbers: Bool = false
-    @objc open var theme: CountryViewTheme?
+    open var theme: CountryViewTheme?
 
 
     init() {
-        super.init(frame: .zero)
-        setup()
-    }
-    
-    init(theme: CountryViewTheme) {
-        self.theme = theme
         super.init(frame: .zero)
         setup()
     }
