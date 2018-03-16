@@ -33,6 +33,8 @@ class ViewController: UIViewController, CountryPickerDelegate {
         //init Picker
         picker.displayOnlyCountriesWithCodes = ["DK", "SE", "NO", "DE"] //display only
         picker.exeptCountriesWithCodes = ["RU"] //exept country
+        let theme = CountryViewTheme(countryCodeTextColor: .white, countryNameTextColor: .white, rowBackgroundColor: .black, showFlagsBorder: false)        //optional for UIPickerView theme changes
+        picker.theme = theme //optional for UIPickerView theme changes
         picker.countryPickerDelegate = self
         picker.showPhoneNumbers = true
         picker.setCountry(code!)
