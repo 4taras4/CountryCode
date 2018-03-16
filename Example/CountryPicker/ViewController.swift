@@ -21,6 +21,8 @@ class ViewController: UIViewController, CountryPickerDelegate  {
         //init Picker
         picker.countryPickerDelegate = self
         picker.showPhoneNumbers = true
+        let theme = CountryViewTheme(countryCodeTextColor: .white, countryNameTextColor: .white, rowBackgroundColor: .black, showFlagsBorder: true) //optional
+        picker.theme = theme //optional
         picker.setCountry(code!)
     }
   
