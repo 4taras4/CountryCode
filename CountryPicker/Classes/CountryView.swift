@@ -61,12 +61,19 @@ class CountryView: NibLoadingView {
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var countryCodeLabel: UILabel!
     
+    init(theme: CountryViewTheme) {
+        super.init(frame: .zero)
+        setup(theme: theme)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        showFlagsBorder(true)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        showFlagsBorder(true)
     }
     
     /// Setup custop pickerView to UIPickerView
@@ -75,16 +82,25 @@ class CountryView: NibLoadingView {
     func setup(_ country: Country) {
         DispatchQueue.main.async { [weak self] in
             if let flag = country.flag {
-                self?.flagImageView.layer.borderWidth = 0.5
-                self?.flagImageView.layer.borderColor = UIColor.darkGray.cgColor
-                self?.flagImageView.layer.cornerRadius = 1
-                self?.flagImageView.layer.masksToBounds = true
                 self?.flagImageView.image = flag
             }
         }
-
         countryNameLabel.text = country.name
         countryCodeLabel.text = country.phoneCode
     }
     
+    private func setup(theme: CountryViewTheme) {
+        view.backgroundColor = theme.rowBackgroundColor
+        countryCodeLabel.textColor = theme.countryCodeTextColor
+        countryNameLabel.textColor = theme.countryNameTextColor
+        showFlagsBorder(theme.showFlagsBorder)
+    }
+    
+    private func showFlagsBorder(_ showFlagsBorder: Bool) {
+        guard showFlagsBorder else { return }
+        flagImageView.layer.borderWidth = 0.5
+        flagImageView.layer.borderColor = UIColor.darkGray.cgColor
+        flagImageView.layer.cornerRadius = 1
+        flagImageView.layer.masksToBounds = true
+    }
 }
