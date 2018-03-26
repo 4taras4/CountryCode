@@ -59,7 +59,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
             return filtered
         }
         if let display = exeptCountriesWithCodes {
-            let filtered = allCountries.filter { country in display.contains(where: { code in country.code != code }) }
+            let filtered = allCountries.filter { display.contains($0.code!) == false}
             return filtered
         }
         return allCountries
