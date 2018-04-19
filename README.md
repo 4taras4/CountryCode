@@ -27,7 +27,7 @@ class ViewController: UIViewController, CountryPickerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //get corrent country
+       //get current country
         let locale = Locale.current
         let code = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
         //init Picker
