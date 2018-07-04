@@ -104,14 +104,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     ///
     /// - Parameter code: selected country
     open func setCountry(_ code: String) {
-        var row = 0
-        for index in 0..<countries.count {
-            if countries[index].code == code {
-                row = index
-                break
-            }
-        }
-
+        guard let row = countries.index(where: {$0.code == code}) else { return }
         self.selectRow(row, inComponent: 0, animated: true)
         let country = countries[row]
         if let countryPickerDelegate = countryPickerDelegate {
@@ -123,14 +116,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     /// Init with phone code
     /// - Parameter phoneCode: String
     open func setCountryByPhoneCode(_ phoneCode: String) {
-        var row = 0
-        for index in 0..<countries.count {
-            if countries[index].phoneCode == phoneCode {
-                row = index
-                break
-            }
-        }
-
+        guard let row = countries.index(where: {$0.phoneCode == phoneCode}) else { return }
         self.selectRow(row, inComponent: 0, animated: true)
         let country = countries[row]
         if let countryPickerDelegate = countryPickerDelegate {
