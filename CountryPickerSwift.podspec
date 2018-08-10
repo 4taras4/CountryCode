@@ -30,7 +30,7 @@ TODO: CountryCode Picker
   s.module_name  = 'CountryPicker'
   s.source_files = 'CountryPicker/Classes/*'
   s.resource_bundles = {
-    'CountryPicker' => ['CountryPicker/Assets/CountryPicker.bundle/*']
+    'CountryPicker' => ['CountryPicker/Assets/CountryPicker.bundle/*', 'CountryPicker/Classes/CountryView.xib']
   }
 
   #s.dependency 'libPhoneNumber-iOS', '~> 0.8'
