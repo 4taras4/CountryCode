@@ -28,10 +28,9 @@ TODO: CountryCode Picker
   s.social_media_url = 'https://twitter.com/lulz_ua'
   s.ios.deployment_target = '8.0'
   s.module_name  = 'CountryPicker'
-  s.source_files = 'CountryPicker/Classes/*'
-  s.resources = 'CountryPicker/Classes/CountryView.xib'
+  s.source_files = 'CountryPicker/Classes/*.{swift}'
   s.resource_bundles = {
-    'CountryPicker' => ['CountryPicker/Assets/CountryPicker.bundle/*']
+    'CountryPicker' => ['CountryPicker/Assets/CountryPicker.bundle/*', 'CountryPicker/Classes/CountryView.xib', 'CountryPicker/Classes/Flags.xcassets']
   }
 
   #s.dependency 'libPhoneNumber-iOS', '~> 0.8'
