@@ -1,5 +1,5 @@
 PODS:
-  - CountryPickerSwift (1.7.1)
+  - CountryPickerSwift (1.7.3)
 
 DEPENDENCIES:
   - CountryPickerSwift (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CountryPickerSwift: dd8bd27cfaa53985d67851c8d5d48c757c5a5303
+  CountryPickerSwift: c2ea9229e80b3717d5f4d47ca22a27f90c760751
 
 PODFILE CHECKSUM: 8ce74047b5fc00e1746f5c660212d2e58313970a
 
