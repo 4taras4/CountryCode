@@ -30,9 +30,7 @@ TODO: CountryCode Picker
   s.ios.deployment_target = '8.0'
   s.module_name  = 'CountryPicker'
   s.source_files = 'CountryPicker/Classes/*.{swift}'
-  s.resource_bundles = {
-    'CountryPicker' => ['CountryPicker/Assets/CountryPicker.bundle/*', 'CountryPicker/Classes/CountryView.xib', 'CountryPicker/Classes/Flags.xcassets']
-  }
+  s.resources = 'CountryPicker/**/*.{xib,bundle,xcassets}'
 
   #s.dependency 'libPhoneNumber-iOS', '~> 0.8'
 
