@@ -43,12 +43,13 @@ public struct Country {
         self.flagName = flagName
     }
     
-    var flag: UIImage? {
+    public var flag: UIImage? {
         return UIImage(named: flagName, in: Bundle(for: CountryPicker.self), compatibleWith: nil)
     }
 }
 
 open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
+    open var currentCountry: Country? = nil
     @objc open var displayOnlyCountriesWithCodes: [String]?
     @objc open var exeptCountriesWithCodes: [String]?
     
@@ -67,7 +68,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     @objc open weak var countryPickerDelegate: CountryPickerDelegate?
     @objc open var showPhoneNumbers: Bool = false
     open var theme: CountryViewTheme?
-    open var currentCountry: Country? = nil
+    
     
     init() {
         super.init(frame: .zero)
