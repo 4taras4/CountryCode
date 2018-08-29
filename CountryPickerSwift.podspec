@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CountryPickerSwift'
-  s.version          = '1.7.3'
+  s.version          = '1.7.4'
 
   s.summary          = 'Swift CountryPicker'
 
@@ -31,7 +31,5 @@ TODO: CountryCode Picker
   s.module_name  = 'CountryPicker'
   s.source_files = 'CountryPicker/Classes/*.{swift}'
   s.resources = 'CountryPicker/**/*.{xib,bundle,xcassets}'
-
-  #s.dependency 'libPhoneNumber-iOS', '~> 0.8'
 
 end
