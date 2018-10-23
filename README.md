@@ -17,7 +17,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Usage
 
 Make your UIPickerView a class of CountryPicker, set its countryPickerDelegate and implement its countryPhoneCodePicker method.
+
 Example:
+
 ```swift
 import CountryPicker
 
@@ -56,6 +58,8 @@ class ViewController: UIViewController, CountryPickerDelegate {
 #### CocoaPods (iOS 8+, OS X 10.9+)
 
 CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
+
+*Swift 4  (Xcode 10)*  `pod 'CountryPickerSwift', '1.8'`
 
 *Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.7'`
 

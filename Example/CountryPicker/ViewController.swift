@@ -21,18 +21,12 @@ class ViewController: UIViewController, CountryPickerDelegate  {
         //init Picker
         picker.countryPickerDelegate = self
         picker.showPhoneNumbers = true
-        let theme = CountryViewTheme(countryCodeTextColor: .white, countryNameTextColor: .white, rowBackgroundColor: .black, showFlagsBorder: true) //optional
-        picker.theme = theme //optional
+//        let theme = CountryViewTheme(countryCodeTextColor: .white, countryNameTextColor: .white, rowBackgroundColor: .black, showFlagsBorder: true) //optional
+//        picker.theme = theme //optional
         picker.setCountry(code!)
     }
   
     // MARK: - CountryPhoneCodePicker Delegate
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     public func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
         code.text = phoneCode
     }

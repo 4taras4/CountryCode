@@ -109,6 +109,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         for index in 0..<countries.count {
             if countries[index].code == code {
                 row = index
+                currentCountry = countries[index]
                 break
             }
         }
@@ -129,6 +130,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         for index in 0..<countries.count {
             if countries[index].phoneCode == phoneCode {
                 row = index
+                currentCountry = countries[index]
                 break
             }
         }
@@ -146,7 +148,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     /// sorted array with data
     ///
     /// - Returns: sorted array with all information phone, flag, name
-    open static func countryNamesByCode() -> [Country] {
+    private static func countryNamesByCode() -> [Country] {
         var countries = [Country]()
         let frameworkBundle = Bundle(for: self)
         guard let jsonPath = frameworkBundle.path(forResource: "CountryPicker.bundle/Data/countryCodes", ofType: "json"), let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
