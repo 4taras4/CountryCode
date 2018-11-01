@@ -246,7 +246,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
             let selectedRowFrame: CGRect = self.bounds.insetBy(dx: 0, dy: (self.frame.height - rowHeight) / 2.0)
             let userTappedOnSelectedRow = selectedRowFrame.contains(tapRecognizer.location(in: self))
             if (userTappedOnSelectedRow) {
-                _ = self.pickerView(self, didSelectRow: 0, inComponent: 0)
+                _ = self.pickerView(self, didSelectRow: self.selectedRow(inComponent: 0), inComponent: 0)
             }
         }
     }
