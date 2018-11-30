@@ -48,10 +48,10 @@ public struct Country {
     }
 }
 
-open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
+public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
     open var currentCountry: Country? = nil
-    @objc open var displayOnlyCountriesWithCodes: [String]?
-    @objc open var exeptCountriesWithCodes: [String]?
+    @objc public var displayOnlyCountriesWithCodes: [String]?
+    @objc public var exeptCountriesWithCodes: [String]?
     
     var countries: [Country] {
         let allCountries: [Country] = CountryPicker.countryNamesByCode()
@@ -65,8 +65,8 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         }
         return allCountries
     }
-    @objc open weak var countryPickerDelegate: CountryPickerDelegate?
-    @objc open var showPhoneNumbers: Bool = false
+    @objc public weak var countryPickerDelegate: CountryPickerDelegate?
+    @objc public var showPhoneNumbers: Bool = false
     open var theme: CountryViewTheme?
     
     
@@ -104,7 +104,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     /// setCountry
     ///
     /// - Parameter code: selected country
-    open func setCountry(_ code: String) {
+    public func setCountry(_ code: String) {
         var row = 0
         for index in 0..<countries.count {
             if countries[index].code == code {
@@ -125,7 +125,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     /// setCountryByPhoneCode
     /// Init with phone code
     /// - Parameter phoneCode: String
-    open func setCountryByPhoneCode(_ phoneCode: String) {
+    public func setCountryByPhoneCode(_ phoneCode: String) {
         var row = 0
         for index in 0..<countries.count {
             if countries[index].phoneCode == phoneCode {
@@ -205,7 +205,7 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
     ///   - component: count of countries
     ///   - view: UIView
     /// - Returns: UIView
-    open func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    public func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var resultView: CountryView
         
         if view == nil {
