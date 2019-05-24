@@ -52,9 +52,13 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     open var currentCountry: Country? = nil
     @objc public var displayOnlyCountriesWithCodes: [String]?
     @objc public var exeptCountriesWithCodes: [String]?
+    @objc public weak var countryPickerDelegate: CountryPickerDelegate?
+    @objc public var showPhoneNumbers: Bool = false
+    @objc public var languageCode: String = "EN"
+    open var theme: CountryViewTheme?
     
     var countries: [Country] {
-        let allCountries: [Country] = CountryPicker.countryNamesByCode()
+        let allCountries: [Country] = CountryPicker.countryNamesByCode(language: languageCode)
         if let display = displayOnlyCountriesWithCodes {
             let filtered = allCountries.filter { country in display.contains(where: { code in country.code == code }) }
             return filtered
@@ -65,10 +69,6 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         }
         return allCountries
     }
-    @objc public weak var countryPickerDelegate: CountryPickerDelegate?
-    @objc public var showPhoneNumbers: Bool = false
-    open var theme: CountryViewTheme?
-    
     
     init() {
         super.init(frame: .zero)
@@ -148,7 +148,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     /// sorted array with data
     ///
     /// - Returns: sorted array with all information phone, flag, name
-    private static func countryNamesByCode() -> [Country] {
+    private static func countryNamesByCode(language: String) -> [Country] {
         var countries = [Country]()
         let frameworkBundle = Bundle(for: self)
         guard let jsonPath = frameworkBundle.path(forResource: "CountryPicker.bundle/Data/countryCodes", ofType: "json"), let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
@@ -164,7 +164,9 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
                         return countries
                     }
                     
-                    guard let code = countryObj["code"] as? String, let phoneCode = countryObj["dial_code"] as? String, let name = countryObj["name"] as? String else {
+                    guard let code = countryObj["code"] as? String,
+                        let phoneCode = countryObj["dial_code"] as? String,
+                        let name = Locale(identifier: language).localizedString(forRegionCode: code) else {
                         return countries
                     }
                     
@@ -174,6 +176,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
                     countries.append(country)
                 }
                 
+                countries = countries.sorted(by: { $0.name! < $1.name! })
             }
         } catch {
             return countries
