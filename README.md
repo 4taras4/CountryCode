@@ -40,6 +40,7 @@ class ViewController: UIViewController, CountryPickerDelegate {
         picker.theme = theme //optional for UIPickerView theme changes
         picker.countryPickerDelegate = self
         picker.showPhoneNumbers = true
+        picker.languageCode = "ES"
         picker.setCountry(code!)
 
     }
