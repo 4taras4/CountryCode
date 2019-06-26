@@ -7,7 +7,7 @@
 [![Swift version](https://img.shields.io/badge/Swift-4-orange.svg)](https://cocoapods.org/pods/CountryPickerSwift)
 [![Beerpay](https://beerpay.io/4taras4/CountryCode/badge.svg?style=flat)](https://beerpay.io/4taras4/CountryCode)
 
-Picker code  Swift 3 / 4.
+Picker code  Swift 3 / 4 / 5.
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first. 
