@@ -143,6 +143,23 @@ open class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+    open func allCountries(withMainCountry code: String) -> [Country] {
+        
+        var countries = self.countries
+        
+        guard let index = countries.firstIndex(where: { (country) -> Bool in
+            return country.code == code
+        }) else {
+            return countries
+        }
+        
+        let country = countries.remove(at: index)
+        countries.insert(country, at: 0)
+        
+        return countries
+        
+    }
+    
     // Populates the metadata from the included json file resource
     
     /// sorted array with data
