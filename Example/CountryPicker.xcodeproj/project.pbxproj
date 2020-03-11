@@ -15,12 +15,12 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		B4B782910687360AE9135552 /* Pods_CountryPicker_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B0C86DDE809E2ACFBAC8F24 /* Pods_CountryPicker_Example.framework */; };
-		E2CF3E8A22C3AC32005A4BE7 /* CountryPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2CF3E8922C3AC32005A4BE7 /* CountryPicker.bundle */; };
-		E2CF3E9022C3AC3A005A4BE7 /* Flags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2CF3E8B22C3AC3A005A4BE7 /* Flags.xcassets */; };
-		E2CF3E9122C3AC3A005A4BE7 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CF3E8C22C3AC3A005A4BE7 /* CountryPicker.swift */; };
-		E2CF3E9222C3AC3A005A4BE7 /* CountryViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CF3E8D22C3AC3A005A4BE7 /* CountryViewTheme.swift */; };
-		E2CF3E9322C3AC3A005A4BE7 /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2CF3E8E22C3AC3A005A4BE7 /* CountryView.xib */; };
-		E2CF3E9422C3AC3A005A4BE7 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CF3E8F22C3AC3A005A4BE7 /* CountryView.swift */; };
+		E2091AAE2418A64100280EE8 /* CountryViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2091AA92418A64100280EE8 /* CountryViewTheme.swift */; };
+		E2091AAF2418A64100280EE8 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2091AAA2418A64100280EE8 /* CountryPicker.swift */; };
+		E2091AB02418A64100280EE8 /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E2091AAB2418A64100280EE8 /* CountryView.xib */; };
+		E2091AB12418A64100280EE8 /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2091AAC2418A64100280EE8 /* CountryView.swift */; };
+		E2091AB22418A64100280EE8 /* Flags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2091AAD2418A64100280EE8 /* Flags.xcassets */; };
+		E2091AB42418A64C00280EE8 /* CountryPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E2091AB32418A64C00280EE8 /* CountryPicker.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,12 +71,12 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0C86DDE809E2ACFBAC8F24 /* Pods_CountryPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountryPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3969A63DEB84EF6A5A0C06 /* Pods-CountryPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountryPicker_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		E2CF3E8922C3AC32005A4BE7 /* CountryPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CountryPicker.bundle; sourceTree = "<group>"; };
-		E2CF3E8B22C3AC3A005A4BE7 /* Flags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Flags.xcassets; sourceTree = "<group>"; };
-		E2CF3E8C22C3AC3A005A4BE7 /* CountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
-		E2CF3E8D22C3AC3A005A4BE7 /* CountryViewTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryViewTheme.swift; sourceTree = "<group>"; };
-		E2CF3E8E22C3AC3A005A4BE7 /* CountryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryView.xib; sourceTree = "<group>"; };
-		E2CF3E8F22C3AC3A005A4BE7 /* CountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
+		E2091AA92418A64100280EE8 /* CountryViewTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryViewTheme.swift; path = ../../CountryPicker/Classes/CountryViewTheme.swift; sourceTree = "<group>"; };
+		E2091AAA2418A64100280EE8 /* CountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryPicker.swift; path = ../../CountryPicker/Classes/CountryPicker.swift; sourceTree = "<group>"; };
+		E2091AAB2418A64100280EE8 /* CountryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountryView.xib; path = ../../CountryPicker/Classes/CountryView.xib; sourceTree = "<group>"; };
+		E2091AAC2418A64100280EE8 /* CountryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryView.swift; path = ../../CountryPicker/Classes/CountryView.swift; sourceTree = "<group>"; };
+		E2091AAD2418A64100280EE8 /* Flags.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Flags.xcassets; path = ../../CountryPicker/Classes/Flags.xcassets; sourceTree = "<group>"; };
+		E2091AB32418A64C00280EE8 /* CountryPicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CountryPicker.bundle; path = ../../CountryPicker/Assets/CountryPicker.bundle; sourceTree = "<group>"; };
 		FAE7B2B83B39399CA782AC48 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,14 +103,14 @@
 		1AB2063021B1D9E900E60B09 /* CountryPickerSwift */ = {
 			isa = PBXGroup;
 			children = (
-				E2CF3E8C22C3AC3A005A4BE7 /* CountryPicker.swift */,
-				E2CF3E8F22C3AC3A005A4BE7 /* CountryView.swift */,
-				E2CF3E8E22C3AC3A005A4BE7 /* CountryView.xib */,
-				E2CF3E8D22C3AC3A005A4BE7 /* CountryViewTheme.swift */,
-				E2CF3E8B22C3AC3A005A4BE7 /* Flags.xcassets */,
-				E2CF3E8922C3AC32005A4BE7 /* CountryPicker.bundle */,
 				1AB2063121B1D9E900E60B09 /* CountryPickerSwift.h */,
 				1AB2063221B1D9E900E60B09 /* Info.plist */,
+				E2091AB32418A64C00280EE8 /* CountryPicker.bundle */,
+				E2091AAA2418A64100280EE8 /* CountryPicker.swift */,
+				E2091AAC2418A64100280EE8 /* CountryView.swift */,
+				E2091AAB2418A64100280EE8 /* CountryView.xib */,
+				E2091AA92418A64100280EE8 /* CountryViewTheme.swift */,
+				E2091AAD2418A64100280EE8 /* Flags.xcassets */,
 			);
 			path = CountryPickerSwift;
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 					1AB2062E21B1D9E900E60B09 = {
 						CreatedOnToolsVersion = 10.1;
 						DevelopmentTeam = GA56SWJ3YH;
-						LastSwiftMigration = 1020;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 					607FACCF1AFB9204008FA782 = {
@@ -310,9 +310,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CF3E8A22C3AC32005A4BE7 /* CountryPicker.bundle in Resources */,
-				E2CF3E9322C3AC3A005A4BE7 /* CountryView.xib in Resources */,
-				E2CF3E9022C3AC3A005A4BE7 /* Flags.xcassets in Resources */,
+				E2091AB02418A64100280EE8 /* CountryView.xib in Resources */,
+				E2091AB42418A64C00280EE8 /* CountryPicker.bundle in Resources */,
+				E2091AB22418A64100280EE8 /* Flags.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,9 +371,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2CF3E9422C3AC3A005A4BE7 /* CountryView.swift in Sources */,
-				E2CF3E9122C3AC3A005A4BE7 /* CountryPicker.swift in Sources */,
-				E2CF3E9222C3AC3A005A4BE7 /* CountryViewTheme.swift in Sources */,
+				E2091AB12418A64100280EE8 /* CountryView.swift in Sources */,
+				E2091AAF2418A64100280EE8 /* CountryPicker.swift in Sources */,
+				E2091AAE2418A64100280EE8 /* CountryViewTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
