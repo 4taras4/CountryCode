@@ -23,7 +23,7 @@ class ViewController: UIViewController, CountryPickerDelegate  {
         picker.showPhoneNumbers = true
 //        let theme = CountryViewTheme(countryCodeTextColor: .white, countryNameTextColor: .white, rowBackgroundColor: .black, showFlagsBorder: true) //optional
 //        picker.theme = theme //optional
-        picker.setCountry(code!)
+        picker.setCountry(code ?? "UA")
     }
   
     // MARK: - CountryPhoneCodePicker Delegate
