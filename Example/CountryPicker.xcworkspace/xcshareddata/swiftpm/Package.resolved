@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CountryCode",
+        "repositoryURL": "https://github.com/4taras4/CountryCode",
+        "state": {
+          "branch": "master",
+          "revision": "92e935987bb2edfcfd664fa7c655ae32e2fc54ff",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
