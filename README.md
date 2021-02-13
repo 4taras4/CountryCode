@@ -11,7 +11,7 @@ Picker code  Swift 3 / 4 / 5.
 
 ## Example
 To run the example project, clone the repo, and run `pod install` from the Example directory first. 
-![1](http://i68.tinypic.com/w2bspi.png)
+![1](https://github.com/4taras4/CountryCode/blob/master/bin/screenShot.png)
 
 
 ## Usage
