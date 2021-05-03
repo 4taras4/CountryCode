@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CountryPickerSwift'
-  s.version          = '1.8.1'
+  s.version          = '1.8.2'
   s.swift_version    = '4.0'
   s.summary          = 'Swift CountryPicker'
 
@@ -19,9 +19,8 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: CountryCode Picker
+                       TODO: CountryCode Picker
                        DESC
-
   s.homepage         = 'https://github.com/4taras4/CountryCode'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '4taras4' => '4taras4@gmail.com' }
