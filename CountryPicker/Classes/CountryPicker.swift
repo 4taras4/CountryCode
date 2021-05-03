@@ -117,7 +117,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         }
 
         selectRow(row, inComponent: 0, animated: true)
-        let country = countries[row]
+        let country = countries.dropFirst(row).first
         currentCountry = country
         if let country = country,
            let countryPickerDelegate = countryPickerDelegate {
@@ -139,7 +139,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         }
 
         selectRow(row, inComponent: 0, animated: true)
-        let country = countries[row]
+        let country = countries.dropFirst(row).first
         currentCountry = country
         if let country = country,
            let countryPickerDelegate = countryPickerDelegate {
