@@ -30,5 +30,6 @@ Pod::Spec.new do |s|
   s.module_name  = 'CountryPicker'
   s.source_files = 'CountryPicker/Classes/*.{swift}'
   s.resources = 'CountryPicker/**/*.{xib,bundle,xcassets}'
+  s.dependency 'Kingfisher', '~> 4.0'
 
 end

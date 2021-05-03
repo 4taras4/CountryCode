@@ -1,15 +1,22 @@
 PODS:
-  - CountryPickerSwift (1.8.1)
+  - CountryPickerSwift (1.8.2):
+    - Kingfisher (~> 4.0)
+  - Kingfisher (4.10.1)
 
 DEPENDENCIES:
   - CountryPickerSwift (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
 
 EXTERNAL SOURCES:
   CountryPickerSwift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CountryPickerSwift: 90e636ce744a28ca8050d4f78fb5c88b3af98b07
+  CountryPickerSwift: 2ac5923ddd02c2c51f6ed07ddee6944ebca3c7b3
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
 
 PODFILE CHECKSUM: 60dcb2e4e3d5c7fe5012284df0af996f87d0b5ca
 

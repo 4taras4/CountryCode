@@ -7,22 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FA422DE597026335982E743EEE75FEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		348DB8EBC797D71D9A38F9DCCA7E2B93 /* CountryPickerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6AF6CAC2E548BE4C19F795AACF1361 /* CountryPickerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		34E5B006BEAFFAB756FF852B863E074B /* Flags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22938451FDC3C7BE7989A6ECEBE77DDF /* Flags.xcassets */; };
-		4DED4D4077547D99C2F68A24C38C001E /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C4A7EA7FE085437276A6B6D48B33D2 /* CountryView.swift */; };
-		8E4616FA58347F2651D1189DEC750973 /* CountryPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49585DF8DF283642AB30A7273094FF49 /* CountryPicker.bundle */; };
-		95AFB10AD62E6BA384CC0E689DC4EBF4 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9649EA9B091877EBD624C7300D955 /* CountryPicker.swift */; };
-		B35D0079D8AD7710088BEDA8CF8E7EC8 /* CountryPickerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE957D4A4B17B69419AD74FC42D4834 /* CountryPickerSwift-dummy.m */; };
-		C172305DD285DBC6F1C4A8D3CAB37769 /* Pods-CountryPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA1541A5527789DA6AA9D15F8BD291 /* Pods-CountryPicker_Example-dummy.m */; };
-		D2C275FF4B9EB80BC8C5291475FB1BE9 /* CountryViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461DD4BCDE12919B1A986C1504FCC44 /* CountryViewTheme.swift */; };
-		D9C3F07609666223976D669B28810BB2 /* Pods-CountryPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA1086F2DBC4B07F1FB0B880C7FB226 /* Pods-CountryPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F4D35C59DB4FCE7D0594A7DA17BB76A2 /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278B4DDD231A701D41E6B6E214A63BB3 /* CountryView.xib */; };
-		F5EC4BAC7CDDAC4F6D8D8EB379FE72F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		0105C2C799C31C6E11B61A74682F1BB0 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8CA0301D9971F796E0AD9B627416AC /* Box.swift */; };
+		01B678617D1AF24A3A269C35E3686612 /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732E8FDA8F19726D465D37B58C721C70 /* ThreadHelper.swift */; };
+		1181B8C914D520226550FF0E68418054 /* RequestModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC5B5C09A6CC22678CF02739E5D7E07 /* RequestModifier.swift */; };
+		1959D2D5864B44EC294D1F404F4A593B /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 23065A8661147711B7550F85B0445C48 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AE54F8B5F196BF54AB9A435AD3C19D9 /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7718FC847D0B75A589B7EBBBBDCEEBB /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AF06CF374F8578EF8A8759853AD5EA2 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D789F7AFBA1B9B4BE357992787E07FC1 /* Kingfisher.framework */; };
+		20CDFE76BD9C434254A6ABA7769CAB52 /* ImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E54D7E88982ABB86752D6E63C95C1B /* ImageModifier.swift */; };
+		22127E8C6703E3E098B7F56EB3353F93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C0007C96CA821DCC2ED433716ADBB /* Foundation.framework */; };
+		24C58652AE075B9B75D8E18EADCD53DD /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F78F10CF9841104026179BEB4D6C5D9 /* Kingfisher-dummy.m */; };
+		265651F8E22FDAF14A594C7077028035 /* CountryPickerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE957D4A4B17B69419AD74FC42D4834 /* CountryPickerSwift-dummy.m */; };
+		343FC48F23D657E4DB7FF0C35BFC3D5F /* CacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A803B2E216BB4562DD763A78A63F75B /* CacheSerializer.swift */; };
+		3A2D0FDD30092B80F616ED7999645C57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C0007C96CA821DCC2ED433716ADBB /* Foundation.framework */; };
+		3DCCE984CD37F66A70CE5379867015A7 /* Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F49AB4949A6E35F9F7D29237447109 /* Kingfisher.swift */; };
+		3FEC3584D4422C627A73D2EE4E52C36D /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6CC9E26ADDD6607DF48E1AEF5F8113F /* ImageTransition.swift */; };
+		4441F68DD6864F5D58677CEFECC6F53D /* CountryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 278B4DDD231A701D41E6B6E214A63BB3 /* CountryView.xib */; };
+		51001BD07C8090A0CEAC8CA21D0D75E3 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51806A502FF0E79F06D81C7E16C6DC3 /* ImageDownloader.swift */; };
+		512911097BC4B7A06A3F3260BA73697C /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C4A7EA7FE085437276A6B6D48B33D2 /* CountryView.swift */; };
+		59AAFDC06AA28FDBDB87CCCCFA60CB60 /* Pods-CountryPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBA1086F2DBC4B07F1FB0B880C7FB226 /* Pods-CountryPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E887A8CE4A767797B98D89A04436CA1 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E53B8C90899A666A50AD947B4F2E5D /* Indicator.swift */; };
+		5F21B52B1C316F4063F1BA3BE661C0DD /* Pods-CountryPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1EA1541A5527789DA6AA9D15F8BD291 /* Pods-CountryPicker_Example-dummy.m */; };
+		62744CD26A8DB9E2E6578DD2B2989066 /* FormatIndicatedCacheSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C7D1201DD68D9086913671AC54AF12 /* FormatIndicatedCacheSerializer.swift */; };
+		6749B982BF3A6C5B7D93928659B4CC48 /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C18C8262BE8CCEB67F47F04F8E303 /* ImageView+Kingfisher.swift */; };
+		7D448D711990AF22F2344824309E6F64 /* CountryPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 49585DF8DF283642AB30A7273094FF49 /* CountryPicker.bundle */; };
+		8257C95367D2CE284B9D76FD9300A199 /* AnimatedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF4BAF062EE244708D6558DD595F92F /* AnimatedImageView.swift */; };
+		832D921BDC86B4A76E3CB434EB5B65C8 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B9649EA9B091877EBD624C7300D955 /* CountryPicker.swift */; };
+		934A687625F1D71DB33D8B894FAD9FEA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853B82B42DE5C884C785ED414851628B /* Image.swift */; };
+		94ECCDE9AE4F7A9EAB84EE077A8EA680 /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60870DE9BED2BF03E13BE8F63D766190 /* KingfisherOptionsInfo.swift */; };
+		A0B6FD372CAA587D86DA5E918F89C3F3 /* CountryPickerSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD6AF6CAC2E548BE4C19F795AACF1361 /* CountryPickerSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A474D149CB346FBF329FD428F698909C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F8C0007C96CA821DCC2ED433716ADBB /* Foundation.framework */; };
+		AAC844E817810442FFA582A07520C9ED /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B856E2D2E6F913745887BA056311FC /* String+MD5.swift */; };
+		ABF293ED6F96CF767D9ED40269D0EF24 /* Flags.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22938451FDC3C7BE7989A6ECEBE77DDF /* Flags.xcassets */; };
+		B67821226FEB3C7664E5121CEBF469EE /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00EB2F4F7B423B4284CAFE624D76523 /* UIButton+Kingfisher.swift */; };
+		B773AA741F4584B6C935388B935039D2 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B093DDCE4C55268908B94B9E9B4D438C /* ImagePrefetcher.swift */; };
+		BDA8EFF3C7DD0B5699B46027FA4FF85C /* CountryViewTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1461DD4BCDE12919B1A986C1504FCC44 /* CountryViewTheme.swift */; };
+		C5B76CF3A3474939F5D1A35C213C4F21 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5950A433059A2F55B5DC4DAE649BED /* Placeholder.swift */; };
+		CFDA4953DAAE42B8C4C50BD3DEF46BFC /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BF1A16D5036EF228C801D90678F604 /* ImageCache.swift */; };
+		D68D4B19EE09514F147239ED566CAE64 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D2FB2DCC94D929614D73683CC25004 /* Resource.swift */; };
+		D6A6EB3DDA37E8108CDE956B0A5FDA85 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA167F71928BC78569593BDB14934A44 /* ImageProcessor.swift */; };
+		E59F52FF5429CA5456D891EF5A08E25F /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9538B2E3262A4D090B59582EB2F7B61C /* Filter.swift */; };
+		E66D54263C757004519131C5FB97E07E /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C757F0F7798B47B0B48A85B5F4232438 /* KingfisherManager.swift */; };
+		EDDE8BEDE2A35FDE18874537CD8FCF0D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A77BC667C781C671E9E726100A3A949 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		29E980C9E609F881682316E1FBDDEEDD /* PBXContainerItemProxy */ = {
+		05FD5C0ABC2A69ECFF176D3161295B76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
+		};
+		1A815AA0778BA02F6F8A03D02FFF0F58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8022D22FAA6690B5E1C379C1BCE1491;
+			remoteInfo = Kingfisher;
+		};
+		E4A4FEB4C81647D87CA42DA2D8BAECB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -35,54 +78,107 @@
 		0993F4D3A2ECC6B7985F931D0F2385AA /* CountryPickerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CountryPickerSwift.modulemap; sourceTree = "<group>"; };
 		0D7F5B1784C1535C22AD5A2DC77642C6 /* CountryPickerSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CountryPickerSwift-Info.plist"; sourceTree = "<group>"; };
 		12D7EBEE4C4EA0BFCA51962F287CC7C7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		13C7D1201DD68D9086913671AC54AF12 /* FormatIndicatedCacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FormatIndicatedCacheSerializer.swift; path = Sources/FormatIndicatedCacheSerializer.swift; sourceTree = "<group>"; };
 		1461DD4BCDE12919B1A986C1504FCC44 /* CountryViewTheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountryViewTheme.swift; path = CountryPicker/Classes/CountryViewTheme.swift; sourceTree = "<group>"; };
 		19B9649EA9B091877EBD624C7300D955 /* CountryPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountryPicker.swift; path = CountryPicker/Classes/CountryPicker.swift; sourceTree = "<group>"; };
+		1B74261A5918441418497FB2666B7F8D /* Kingfisher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.release.xcconfig; sourceTree = "<group>"; };
+		1E5B2F0CCCDD61887292FF4ED7975430 /* Kingfisher-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Kingfisher-Info.plist"; sourceTree = "<group>"; };
 		22938451FDC3C7BE7989A6ECEBE77DDF /* Flags.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Flags.xcassets; sourceTree = "<group>"; };
+		23065A8661147711B7550F85B0445C48 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
 		278B4DDD231A701D41E6B6E214A63BB3 /* CountryView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = CountryView.xib; sourceTree = "<group>"; };
 		3AA740DB2CFEADDA3F92239B8A849A09 /* CountryPickerSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CountryPickerSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3DF4BAF062EE244708D6558DD595F92F /* AnimatedImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedImageView.swift; path = Sources/AnimatedImageView.swift; sourceTree = "<group>"; };
+		46E53B8C90899A666A50AD947B4F2E5D /* Indicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Indicator.swift; path = Sources/Indicator.swift; sourceTree = "<group>"; };
 		49585DF8DF283642AB30A7273094FF49 /* CountryPicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = CountryPicker.bundle; sourceTree = "<group>"; };
+		4F78F10CF9841104026179BEB4D6C5D9 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
 		560AB06D68F470172307F5EF827DF4F2 /* CountryPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CountryPicker.framework; path = CountryPickerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56C4FD0BA61DD5874EB7BE9BEC965C64 /* Pods-CountryPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CountryPicker_Example.modulemap"; sourceTree = "<group>"; };
+		57D2FB2DCC94D929614D73683CC25004 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
+		5A803B2E216BB4562DD763A78A63F75B /* CacheSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CacheSerializer.swift; path = Sources/CacheSerializer.swift; sourceTree = "<group>"; };
+		60870DE9BED2BF03E13BE8F63D766190 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		66B856E2D2E6F913745887BA056311FC /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
 		68C4A7EA7FE085437276A6B6D48B33D2 /* CountryView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CountryView.swift; path = CountryPicker/Classes/CountryView.swift; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		68F49AB4949A6E35F9F7D29237447109 /* Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Kingfisher.swift; path = Sources/Kingfisher.swift; sourceTree = "<group>"; };
+		732E8FDA8F19726D465D37B58C721C70 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
 		73A2E6B3E67D8B0ACB08A0D79A01C378 /* CountryPickerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountryPickerSwift-prefix.pch"; sourceTree = "<group>"; };
 		7900CE67D5CC05DF754640B67560D0E0 /* Pods-CountryPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CountryPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7A77BC667C781C671E9E726100A3A949 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		7F8C0007C96CA821DCC2ED433716ADBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7FC5B5C09A6CC22678CF02739E5D7E07 /* RequestModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestModifier.swift; path = Sources/RequestModifier.swift; sourceTree = "<group>"; };
 		848759F9A1D4B22CA7B14011E622128C /* Pods-CountryPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CountryPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
+		853B82B42DE5C884C785ED414851628B /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
 		9371CF154C1ED5EC1127022751C2E18D /* Pods_CountryPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CountryPicker_Example.framework; path = "Pods-CountryPicker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9538B2E3262A4D090B59582EB2F7B61C /* Filter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Filter.swift; path = Sources/Filter.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5E4DD0095C79F7C16C0B530C1E4392 /* CountryPickerSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CountryPickerSwift.debug.xcconfig; sourceTree = "<group>"; };
 		A151746352DF535BA140F3113B5CD3A1 /* Pods-CountryPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CountryPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A5408A28430A168FB7295CF9B4F17CDD /* Pods-CountryPicker_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CountryPicker_Example-Info.plist"; sourceTree = "<group>"; };
+		A6CC9E26ADDD6607DF48E1AEF5F8113F /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		A7718FC847D0B75A589B7EBBBBDCEEBB /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		B093DDCE4C55268908B94B9E9B4D438C /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		B5BF1A16D5036EF228C801D90678F604 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+		B61956F8E920142A06EBD263C23B5F6D /* Kingfisher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.debug.xcconfig; sourceTree = "<group>"; };
+		B7E54D7E88982ABB86752D6E63C95C1B /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/ImageModifier.swift; sourceTree = "<group>"; };
+		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Kingfisher.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C757F0F7798B47B0B48A85B5F4232438 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
 		C7A0213E7CB71D916C91D41F1520B3E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		CCD71BD8C54C416C6D01D192353801A8 /* Pods-CountryPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CountryPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		CD6AF6CAC2E548BE4C19F795AACF1361 /* CountryPickerSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CountryPickerSwift-umbrella.h"; sourceTree = "<group>"; };
+		CF5950A433059A2F55B5DC4DAE649BED /* Placeholder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = Sources/Placeholder.swift; sourceTree = "<group>"; };
 		CFE957D4A4B17B69419AD74FC42D4834 /* CountryPickerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CountryPickerSwift-dummy.m"; sourceTree = "<group>"; };
 		D7556FDC37EB9973BF4301181DD27BBA /* CountryPickerSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CountryPickerSwift.release.xcconfig; sourceTree = "<group>"; };
+		D789F7AFBA1B9B4BE357992787E07FC1 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA167F71928BC78569593BDB14934A44 /* ImageProcessor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageProcessor.swift; path = Sources/ImageProcessor.swift; sourceTree = "<group>"; };
+		DAC0ACE30B6D7A9DB6D91F45CFE770D0 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
 		E489BD61D485A2AB70DEEDEBFC826540 /* Pods-CountryPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CountryPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E6376DC144E7FAD5E35CEDC99DCF8919 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		E88C18C8262BE8CCEB67F47F04F8E303 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		EC8CA0301D9971F796E0AD9B627416AC /* Box.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Box.swift; path = Sources/Box.swift; sourceTree = "<group>"; };
+		F00EB2F4F7B423B4284CAFE624D76523 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		F1EA1541A5527789DA6AA9D15F8BD291 /* Pods-CountryPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CountryPicker_Example-dummy.m"; sourceTree = "<group>"; };
+		F51806A502FF0E79F06D81C7E16C6DC3 /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
 		FBA1086F2DBC4B07F1FB0B880C7FB226 /* Pods-CountryPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CountryPicker_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3D71DBD6D92A8361D59CC59ACE81749B /* Frameworks */ = {
+		7B828E013B81FF65264FF9FD07685465 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5EC4BAC7CDDAC4F6D8D8EB379FE72F1 /* Foundation.framework in Frameworks */,
+				EDDE8BEDE2A35FDE18874537CD8FCF0D /* CFNetwork.framework in Frameworks */,
+				22127E8C6703E3E098B7F56EB3353F93 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBA316802E5C94A45EBFF76E3CB5FF22 /* Frameworks */ = {
+		965FF02B1E16829C05D32D4D8B3CA6FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FA422DE597026335982E743EEE75FEE /* Foundation.framework in Frameworks */,
+				A474D149CB346FBF329FD428F698909C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFAA26EBEAAA006A6FDC32CF2582C0D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A2D0FDD30092B80F616ED7999645C57 /* Foundation.framework in Frameworks */,
+				1AF06CF374F8578EF8A8759853AD5EA2 /* Kingfisher.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		307FB50171BFA181BF15C4020F570038 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7A77BC667C781C671E9E726100A3A949 /* CFNetwork.framework */,
+				7F8C0007C96CA821DCC2ED433716ADBB /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		3D2F065A21DD64D7475EC60F79638D23 /* Pods-CountryPicker_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +194,14 @@
 			);
 			name = "Pods-CountryPicker_Example";
 			path = "Target Support Files/Pods-CountryPicker_Example";
+			sourceTree = "<group>";
+		};
+		3DAB32C302C0DA94B1BDB250CA24E738 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A51E1003A82CC5F6AC7E9E14D2435221 /* Kingfisher */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		4FC8DB76E76413B720220918222FFADF /* Support Files */ = {
@@ -123,14 +227,6 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		737C37A1770CA9C6B0FD039E171985CA /* Pod */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +237,16 @@
 			name = Pod;
 			sourceTree = "<group>";
 		};
+		8518279FBCDEA4DD3930A129092E932A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				560AB06D68F470172307F5EF827DF4F2 /* CountryPicker.framework */,
+				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
+				9371CF154C1ED5EC1127022751C2E18D /* Pods_CountryPicker_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		913F7600333640A5B7DB424269295348 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,13 +255,52 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A7EA03A77F8EBD31B9E224BBC5AC7701 /* Products */ = {
+		A51E1003A82CC5F6AC7E9E14D2435221 /* Kingfisher */ = {
 			isa = PBXGroup;
 			children = (
-				560AB06D68F470172307F5EF827DF4F2 /* CountryPicker.framework */,
-				9371CF154C1ED5EC1127022751C2E18D /* Pods_CountryPicker_Example.framework */,
+				3DF4BAF062EE244708D6558DD595F92F /* AnimatedImageView.swift */,
+				EC8CA0301D9971F796E0AD9B627416AC /* Box.swift */,
+				5A803B2E216BB4562DD763A78A63F75B /* CacheSerializer.swift */,
+				9538B2E3262A4D090B59582EB2F7B61C /* Filter.swift */,
+				13C7D1201DD68D9086913671AC54AF12 /* FormatIndicatedCacheSerializer.swift */,
+				853B82B42DE5C884C785ED414851628B /* Image.swift */,
+				B5BF1A16D5036EF228C801D90678F604 /* ImageCache.swift */,
+				F51806A502FF0E79F06D81C7E16C6DC3 /* ImageDownloader.swift */,
+				B7E54D7E88982ABB86752D6E63C95C1B /* ImageModifier.swift */,
+				B093DDCE4C55268908B94B9E9B4D438C /* ImagePrefetcher.swift */,
+				DA167F71928BC78569593BDB14934A44 /* ImageProcessor.swift */,
+				A6CC9E26ADDD6607DF48E1AEF5F8113F /* ImageTransition.swift */,
+				E88C18C8262BE8CCEB67F47F04F8E303 /* ImageView+Kingfisher.swift */,
+				46E53B8C90899A666A50AD947B4F2E5D /* Indicator.swift */,
+				23065A8661147711B7550F85B0445C48 /* Kingfisher.h */,
+				68F49AB4949A6E35F9F7D29237447109 /* Kingfisher.swift */,
+				C757F0F7798B47B0B48A85B5F4232438 /* KingfisherManager.swift */,
+				60870DE9BED2BF03E13BE8F63D766190 /* KingfisherOptionsInfo.swift */,
+				CF5950A433059A2F55B5DC4DAE649BED /* Placeholder.swift */,
+				7FC5B5C09A6CC22678CF02739E5D7E07 /* RequestModifier.swift */,
+				57D2FB2DCC94D929614D73683CC25004 /* Resource.swift */,
+				66B856E2D2E6F913745887BA056311FC /* String+MD5.swift */,
+				732E8FDA8F19726D465D37B58C721C70 /* ThreadHelper.swift */,
+				F00EB2F4F7B423B4284CAFE624D76523 /* UIButton+Kingfisher.swift */,
+				ACEA3550F82C1151D17B5C6824F88D18 /* Support Files */,
 			);
-			name = Products;
+			name = Kingfisher;
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		ACEA3550F82C1151D17B5C6824F88D18 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E6376DC144E7FAD5E35CEDC99DCF8919 /* Kingfisher.modulemap */,
+				4F78F10CF9841104026179BEB4D6C5D9 /* Kingfisher-dummy.m */,
+				1E5B2F0CCCDD61887292FF4ED7975430 /* Kingfisher-Info.plist */,
+				DAC0ACE30B6D7A9DB6D91F45CFE770D0 /* Kingfisher-prefix.pch */,
+				A7718FC847D0B75A589B7EBBBBDCEEBB /* Kingfisher-umbrella.h */,
+				B61956F8E920142A06EBD263C23B5F6D /* Kingfisher.debug.xcconfig */,
+				1B74261A5918441418497FB2666B7F8D /* Kingfisher.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -163,16 +308,18 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				572472AAE98B642F5F49F00635D550C1 /* Development Pods */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				A7EA03A77F8EBD31B9E224BBC5AC7701 /* Products */,
+				D95A3479441EC0EE68B306E41FD790FC /* Frameworks */,
+				3DAB32C302C0DA94B1BDB250CA24E738 /* Pods */,
+				8518279FBCDEA4DD3930A129092E932A /* Products */,
 				913F7600333640A5B7DB424269295348 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		D95A3479441EC0EE68B306E41FD790FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				D789F7AFBA1B9B4BE357992787E07FC1 /* Kingfisher.framework */,
+				307FB50171BFA181BF15C4020F570038 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -214,19 +361,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		563F8CAC0F1C81C435ACF3201EBC28A3 /* Headers */ = {
+		566C32917D3D83C751C7838C5BF92BD4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				348DB8EBC797D71D9A38F9DCCA7E2B93 /* CountryPickerSwift-umbrella.h in Headers */,
+				59AAFDC06AA28FDBDB87CCCCFA60CB60 /* Pods-CountryPicker_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		735904544CC095FF0D5FB0182B6B18C4 /* Headers */ = {
+		5A2598918DF651729F6D29EF73451B63 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9C3F07609666223976D669B28810BB2 /* Pods-CountryPicker_Example-umbrella.h in Headers */,
+				A0B6FD372CAA587D86DA5E918F89C3F3 /* CountryPickerSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66C975E74B08131ECA42DCDE3DDA34CD /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AE54F8B5F196BF54AB9A435AD3C19D9 /* Kingfisher-umbrella.h in Headers */,
+				1959D2D5864B44EC294D1F404F4A593B /* Kingfisher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,17 +391,18 @@
 /* Begin PBXNativeTarget section */
 		9D8918F5EC989FDBCB5795E80DA6B0B2 /* Pods-CountryPicker_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 589342178AA8B4A6D353AB83FCEFB034 /* Build configuration list for PBXNativeTarget "Pods-CountryPicker_Example" */;
+			buildConfigurationList = D51BECBFD56892F26AE78608B1E642D6 /* Build configuration list for PBXNativeTarget "Pods-CountryPicker_Example" */;
 			buildPhases = (
-				735904544CC095FF0D5FB0182B6B18C4 /* Headers */,
-				17471E3679C73D2788181A60FB276B05 /* Sources */,
-				3D71DBD6D92A8361D59CC59ACE81749B /* Frameworks */,
-				A55571F921F58EE0A345286B0CE789EF /* Resources */,
+				566C32917D3D83C751C7838C5BF92BD4 /* Headers */,
+				75004A1D9F89E9ADC00E13526DB1D5DB /* Sources */,
+				965FF02B1E16829C05D32D4D8B3CA6FE /* Frameworks */,
+				2CFBF2711BA48657A8B5F9C55804E868 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				90E5472084F1610ED33965FC36AED0BF /* PBXTargetDependency */,
+				D65840F08E5E5630C7B18D3EE99D21B2 /* PBXTargetDependency */,
+				5860F5DE80BEBE4CEBF18B8C3426F5D5 /* PBXTargetDependency */,
 			);
 			name = "Pods-CountryPicker_Example";
 			productName = "Pods-CountryPicker_Example";
@@ -254,20 +411,39 @@
 		};
 		E66814C3CD82F965BA3B2704535DEA19 /* CountryPickerSwift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E8EF0F75644DC2BD263363C2B1A81769 /* Build configuration list for PBXNativeTarget "CountryPickerSwift" */;
+			buildConfigurationList = 1DACFC2CDB8C5408FAA571FEC8C7E368 /* Build configuration list for PBXNativeTarget "CountryPickerSwift" */;
 			buildPhases = (
-				563F8CAC0F1C81C435ACF3201EBC28A3 /* Headers */,
-				05311737A7893D50633E3D2CED60D006 /* Sources */,
-				FBA316802E5C94A45EBFF76E3CB5FF22 /* Frameworks */,
-				6E674E997BFB4071A9BDABB643409205 /* Resources */,
+				5A2598918DF651729F6D29EF73451B63 /* Headers */,
+				3FD7F53071E2E22D22CD9108F05047F9 /* Sources */,
+				FFAA26EBEAAA006A6FDC32CF2582C0D9 /* Frameworks */,
+				2D48633399B6CA7916551C66BE57772B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A9D1F1AAC85B0AE1AA5741553C0344F /* PBXTargetDependency */,
+			);
+			name = CountryPickerSwift;
+			productName = CountryPickerSwift;
+			productReference = 560AB06D68F470172307F5EF827DF4F2 /* CountryPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34C67EF65A60FA1F23C09F1F4898767F /* Build configuration list for PBXNativeTarget "Kingfisher" */;
+			buildPhases = (
+				66C975E74B08131ECA42DCDE3DDA34CD /* Headers */,
+				CBCD879D0AC88341299541A646B21869 /* Sources */,
+				7B828E013B81FF65264FF9FD07685465 /* Frameworks */,
+				531D9F981C434881B06F60D7A9C155C4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CountryPickerSwift;
-			productName = CountryPickerSwift;
-			productReference = 560AB06D68F470172307F5EF827DF4F2 /* CountryPicker.framework */;
+			name = Kingfisher;
+			productName = Kingfisher;
+			productReference = C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -288,28 +464,36 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A7EA03A77F8EBD31B9E224BBC5AC7701 /* Products */;
+			productRefGroup = 8518279FBCDEA4DD3930A129092E932A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E66814C3CD82F965BA3B2704535DEA19 /* CountryPickerSwift */,
+				E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */,
 				9D8918F5EC989FDBCB5795E80DA6B0B2 /* Pods-CountryPicker_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6E674E997BFB4071A9BDABB643409205 /* Resources */ = {
+		2CFBF2711BA48657A8B5F9C55804E868 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E4616FA58347F2651D1189DEC750973 /* CountryPicker.bundle in Resources */,
-				F4D35C59DB4FCE7D0594A7DA17BB76A2 /* CountryView.xib in Resources */,
-				34E5B006BEAFFAB756FF852B863E074B /* Flags.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A55571F921F58EE0A345286B0CE789EF /* Resources */ = {
+		2D48633399B6CA7916551C66BE57772B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D448D711990AF22F2344824309E6F64 /* CountryPicker.bundle in Resources */,
+				4441F68DD6864F5D58677CEFECC6F53D /* CountryView.xib in Resources */,
+				ABF293ED6F96CF767D9ED40269D0EF24 /* Flags.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		531D9F981C434881B06F60D7A9C155C4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -319,38 +503,112 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		05311737A7893D50633E3D2CED60D006 /* Sources */ = {
+		3FD7F53071E2E22D22CD9108F05047F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95AFB10AD62E6BA384CC0E689DC4EBF4 /* CountryPicker.swift in Sources */,
-				B35D0079D8AD7710088BEDA8CF8E7EC8 /* CountryPickerSwift-dummy.m in Sources */,
-				4DED4D4077547D99C2F68A24C38C001E /* CountryView.swift in Sources */,
-				D2C275FF4B9EB80BC8C5291475FB1BE9 /* CountryViewTheme.swift in Sources */,
+				832D921BDC86B4A76E3CB434EB5B65C8 /* CountryPicker.swift in Sources */,
+				265651F8E22FDAF14A594C7077028035 /* CountryPickerSwift-dummy.m in Sources */,
+				512911097BC4B7A06A3F3260BA73697C /* CountryView.swift in Sources */,
+				BDA8EFF3C7DD0B5699B46027FA4FF85C /* CountryViewTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		17471E3679C73D2788181A60FB276B05 /* Sources */ = {
+		75004A1D9F89E9ADC00E13526DB1D5DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C172305DD285DBC6F1C4A8D3CAB37769 /* Pods-CountryPicker_Example-dummy.m in Sources */,
+				5F21B52B1C316F4063F1BA3BE661C0DD /* Pods-CountryPicker_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBCD879D0AC88341299541A646B21869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8257C95367D2CE284B9D76FD9300A199 /* AnimatedImageView.swift in Sources */,
+				0105C2C799C31C6E11B61A74682F1BB0 /* Box.swift in Sources */,
+				343FC48F23D657E4DB7FF0C35BFC3D5F /* CacheSerializer.swift in Sources */,
+				E59F52FF5429CA5456D891EF5A08E25F /* Filter.swift in Sources */,
+				62744CD26A8DB9E2E6578DD2B2989066 /* FormatIndicatedCacheSerializer.swift in Sources */,
+				934A687625F1D71DB33D8B894FAD9FEA /* Image.swift in Sources */,
+				CFDA4953DAAE42B8C4C50BD3DEF46BFC /* ImageCache.swift in Sources */,
+				51001BD07C8090A0CEAC8CA21D0D75E3 /* ImageDownloader.swift in Sources */,
+				20CDFE76BD9C434254A6ABA7769CAB52 /* ImageModifier.swift in Sources */,
+				B773AA741F4584B6C935388B935039D2 /* ImagePrefetcher.swift in Sources */,
+				D6A6EB3DDA37E8108CDE956B0A5FDA85 /* ImageProcessor.swift in Sources */,
+				3FEC3584D4422C627A73D2EE4E52C36D /* ImageTransition.swift in Sources */,
+				6749B982BF3A6C5B7D93928659B4CC48 /* ImageView+Kingfisher.swift in Sources */,
+				5E887A8CE4A767797B98D89A04436CA1 /* Indicator.swift in Sources */,
+				24C58652AE075B9B75D8E18EADCD53DD /* Kingfisher-dummy.m in Sources */,
+				3DCCE984CD37F66A70CE5379867015A7 /* Kingfisher.swift in Sources */,
+				E66D54263C757004519131C5FB97E07E /* KingfisherManager.swift in Sources */,
+				94ECCDE9AE4F7A9EAB84EE077A8EA680 /* KingfisherOptionsInfo.swift in Sources */,
+				C5B76CF3A3474939F5D1A35C213C4F21 /* Placeholder.swift in Sources */,
+				1181B8C914D520226550FF0E68418054 /* RequestModifier.swift in Sources */,
+				D68D4B19EE09514F147239ED566CAE64 /* Resource.swift in Sources */,
+				AAC844E817810442FFA582A07520C9ED /* String+MD5.swift in Sources */,
+				01B678617D1AF24A3A269C35E3686612 /* ThreadHelper.swift in Sources */,
+				B67821226FEB3C7664E5121CEBF469EE /* UIButton+Kingfisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		90E5472084F1610ED33965FC36AED0BF /* PBXTargetDependency */ = {
+		5860F5DE80BEBE4CEBF18B8C3426F5D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = 05FD5C0ABC2A69ECFF176D3161295B76 /* PBXContainerItemProxy */;
+		};
+		9A9D1F1AAC85B0AE1AA5741553C0344F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = E8022D22FAA6690B5E1C379C1BCE1491 /* Kingfisher */;
+			targetProxy = 1A815AA0778BA02F6F8A03D02FFF0F58 /* PBXContainerItemProxy */;
+		};
+		D65840F08E5E5630C7B18D3EE99D21B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CountryPickerSwift;
 			target = E66814C3CD82F965BA3B2704535DEA19 /* CountryPickerSwift */;
-			targetProxy = 29E980C9E609F881682316E1FBDDEEDD /* PBXContainerItemProxy */;
+			targetProxy = E4A4FEB4C81647D87CA42DA2D8BAECB3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		202467A0E21E00C6D6B1FCC0626FF1A9 /* Debug */ = {
+		09E643A6BCE3E63DF66E9FB63255FA2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B61956F8E920142A06EBD263C23B5F6D /* Kingfisher.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0D28775E7FEFBB851E5BE2CC713FE4A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E5E4DD0095C79F7C16C0B530C1E4392 /* CountryPickerSwift.debug.xcconfig */;
 			buildSettings = {
@@ -381,13 +639,11 @@
 			};
 			name = Debug;
 		};
-		83CA09B4EE01870A2B1201D509094777 /* Debug */ = {
+		553AA51EFC78FE32E767C29036C7D0C4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A151746352DF535BA140F3113B5CD3A1 /* Pods-CountryPicker_Example.debug.xcconfig */;
+			baseConfigurationReference = 1B74261A5918441418497FB2666B7F8D /* Kingfisher.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -396,53 +652,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Kingfisher-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				PRODUCT_MODULE_NAME = Kingfisher;
+				PRODUCT_NAME = Kingfisher;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		859C66454332CABE1D8594C5C4996232 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7900CE67D5CC05DF754640B67560D0E0 /* Pods-CountryPicker_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -450,7 +671,7 @@
 			};
 			name = Release;
 		};
-		880BF8EBE2873BB52890D5084B267F4E /* Release */ = {
+		8422662A3D1DD647AFE2D9E56B88B5AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D7556FDC37EB9973BF4301181DD27BBA /* CountryPickerSwift.release.xcconfig */;
 			buildSettings = {
@@ -544,6 +765,40 @@
 			};
 			name = Release;
 		};
+		B3D8019C6F7A26E8CCAC8C21359617F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A151746352DF535BA140F3113B5CD3A1 /* Pods-CountryPicker_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -610,9 +865,62 @@
 			};
 			name = Debug;
 		};
+		BB8C3317DF827F0750AEE69C03867796 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7900CE67D5CC05DF754640B67560D0E0 /* Pods-CountryPicker_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CountryPicker_Example/Pods-CountryPicker_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1DACFC2CDB8C5408FAA571FEC8C7E368 /* Build configuration list for PBXNativeTarget "CountryPickerSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D28775E7FEFBB851E5BE2CC713FE4A1 /* Debug */,
+				8422662A3D1DD647AFE2D9E56B88B5AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34C67EF65A60FA1F23C09F1F4898767F /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09E643A6BCE3E63DF66E9FB63255FA2E /* Debug */,
+				553AA51EFC78FE32E767C29036C7D0C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -622,20 +930,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		589342178AA8B4A6D353AB83FCEFB034 /* Build configuration list for PBXNativeTarget "Pods-CountryPicker_Example" */ = {
+		D51BECBFD56892F26AE78608B1E642D6 /* Build configuration list for PBXNativeTarget "Pods-CountryPicker_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				83CA09B4EE01870A2B1201D509094777 /* Debug */,
-				859C66454332CABE1D8594C5C4996232 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E8EF0F75644DC2BD263363C2B1A81769 /* Build configuration list for PBXNativeTarget "CountryPickerSwift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				202467A0E21E00C6D6B1FCC0626FF1A9 /* Debug */,
-				880BF8EBE2873BB52890D5084B267F4E /* Release */,
+				B3D8019C6F7A26E8CCAC8C21359617F3 /* Debug */,
+				BB8C3317DF827F0750AEE69C03867796 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
