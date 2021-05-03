@@ -7,12 +7,12 @@
 [![Swift version](https://img.shields.io/badge/Swift-4-orange.svg)](https://cocoapods.org/pods/CountryPickerSwift)
 [![Beerpay](https://beerpay.io/4taras4/CountryCode/badge.svg?style=flat)](https://beerpay.io/4taras4/CountryCode)
 
-Picker code  Swift 3 / 4.
+Picker code Swift 3 / 4.
 
 ## Example
-To run the example project, clone the repo, and run `pod install` from the Example directory first. 
-![1](http://i68.tinypic.com/w2bspi.png)
 
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+![preview](preview.png)
 
 ## Usage
 
@@ -26,8 +26,8 @@ import CountryPicker
 class ViewController: UIViewController, CountryPickerDelegate {
 
     @IBOutlet weak var picker: CountryPicker!
-   
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
        //get current country
@@ -43,7 +43,7 @@ class ViewController: UIViewController, CountryPickerDelegate {
         picker.setCountry(code!)
 
     }
-    
+
     // a picker item was selected
     func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage) {
        //pick up anythink
@@ -59,11 +59,11 @@ class ViewController: UIViewController, CountryPickerDelegate {
 
 CountryPicker is available through [CocoaPods](http://cocoapods.org). To install
 
-*Swift 4  (Xcode 10)*  `pod 'CountryPickerSwift', '1.8'`
+_Swift 4 (Xcode 10)_ `pod 'CountryPickerSwift', '1.8'`
 
-*Swift 3.1 (Xcode 9)*  `pod 'CountryPickerSwift', '1.7'`
+_Swift 3.1 (Xcode 9)_ `pod 'CountryPickerSwift', '1.7'`
 
-*Swift 3.0+ (Xcode 8)*  `pod 'CountryPickerSwift', '1.4.4'`
+_Swift 3.0+ (Xcode 8)_ `pod 'CountryPickerSwift', '1.4.4'`
 
 it, simply add the following line to your 'Podfile':
 
@@ -107,13 +107,12 @@ To use this library in your project manually just drag and drop CountryPicker fo
 CountryPicker is available under the MIT license. See the LICENSE file for more info.
 [release-link](https://github.com/4taras4/CountryCode/releases/latest)
 
-
 ## Donate
 
- Donation Bitcoin 141Q3KduSqvTtMbrU6YouSErDBh1SpiLrL 
-
+Donation Bitcoin 141Q3KduSqvTtMbrU6YouSErDBh1SpiLrL
 
 ## Support on Beerpay
+
 Hey dude! Help me out for a couple of :beers:!
 
-[![Beerpay](https://beerpay.io/4taras4/CountryCode/badge.svg?style=beer-square)](https://beerpay.io/4taras4/CountryCode)  [![Beerpay](https://beerpay.io/4taras4/CountryCode/make-wish.svg?style=flat-square)](https://beerpay.io/4taras4/CountryCode?focus=wish)
+[![Beerpay](https://beerpay.io/4taras4/CountryCode/badge.svg?style=beer-square)](https://beerpay.io/4taras4/CountryCode) [![Beerpay](https://beerpay.io/4taras4/CountryCode/make-wish.svg?style=flat-square)](https://beerpay.io/4taras4/CountryCode?focus=wish)
