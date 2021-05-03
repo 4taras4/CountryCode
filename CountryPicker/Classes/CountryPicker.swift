@@ -219,6 +219,10 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         return countries.count
     }
 
+    public func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 44.0
+    }
+
     /// PickerView
     /// Initialization of Country pockerView
     /// - Parameters:
