@@ -62,12 +62,10 @@ class CountryView: NibLoadingView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        showFlagsBorder(true)
     }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        showFlagsBorder(true)
     }
 
     /// Setup custop pickerView to UIPickerView
@@ -87,14 +85,5 @@ class CountryView: NibLoadingView {
         view.backgroundColor = theme.rowBackgroundColor
         countryCodeLabel.textColor = theme.countryCodeTextColor
         countryNameLabel.textColor = theme.countryNameTextColor
-        showFlagsBorder(theme.showFlagsBorder)
-    }
-
-    private func showFlagsBorder(_ showFlagsBorder: Bool) {
-        guard showFlagsBorder else { return }
-        flagImageView.layer.borderWidth = 0.5
-        flagImageView.layer.borderColor = UIColor.darkGray.cgColor
-        flagImageView.layer.cornerRadius = 1
-        flagImageView.layer.masksToBounds = true
     }
 }
