@@ -28,6 +28,7 @@ public struct Country {
     public let name: String?
     public let phoneCode: String?
     public let flagName: String?
+    public let flagURL: URL?
 
     /// Country code initialization
     ///
@@ -41,6 +42,25 @@ public struct Country {
         self.name = name
         self.phoneCode = phoneCode
         self.flagName = flagName
+        flagURL = nil
+    }
+
+    /// - Parameters:
+    ///   - code: String
+    ///   - name: String
+    ///   - phoneCode: String
+    ///   - flagName: String
+    ///   - flagURLString: String
+    public init(code: String?, name: String?, phoneCode: String?, flagURLString: String?) {
+        self.code = code
+        self.name = name
+        self.phoneCode = phoneCode
+        flagName = nil
+        if let flagURLString = flagURLString {
+            flagURL = URL(string: flagURLString)
+        } else {
+            flagURL = nil
+        }
     }
 
     public var flag: UIImage? {
@@ -56,7 +76,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     public var displayOnlyCountriesWithCodes: [String]?
     public var exeptCountriesWithCodes: [String]?
 
-    var countries: [Country] {
+    public lazy var countries: [Country] = {
         let allCountries: [Country] = CountryPicker.countryNamesByCode()
         if let display = displayOnlyCountriesWithCodes {
             let filtered = allCountries.filter { country in display.contains(where: { code in country.code == code }) }
@@ -67,7 +87,8 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
             return filtered
         }
         return allCountries
-    }
+    }()
+
     public var countryPickerDelegate: CountryPickerDelegate?
     public var showPhoneNumbers: Bool = false
     open var theme: CountryViewTheme?

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Kingfisher
 import UIKit
 
 class NibLoadingView: UIView {
@@ -72,11 +73,14 @@ class CountryView: NibLoadingView {
     /// initialized by country code
     /// - Parameter country: Countrycode
     func setup(_ country: Country) {
-        DispatchQueue.main.async { [weak self] in
-            if let flag = country.flag {
+        if let flagURL = country.flagURL {
+            flagImageView.kf.setImage(with: flagURL)
+        } else if let flag = country.flag {
+            DispatchQueue.main.async { [weak self] in
                 self?.flagImageView.image = flag
             }
         }
+
         countryNameLabel.text = country.name
         countryCodeLabel.text = country.phoneCode
     }
