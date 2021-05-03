@@ -27,7 +27,7 @@ public struct Country {
     public let code: String?
     public let name: String?
     public let phoneCode: String?
-    public let flagName: String
+    public let flagName: String?
 
     /// Country code initialization
     ///
@@ -36,7 +36,7 @@ public struct Country {
     ///   - name: String
     ///   - phoneCode: String
     ///   - flagName: String
-    init(code: String?, name: String?, phoneCode: String?, flagName: String) {
+    init(code: String?, name: String?, phoneCode: String?, flagName: String?) {
         self.code = code
         self.name = name
         self.phoneCode = phoneCode
@@ -44,7 +44,10 @@ public struct Country {
     }
 
     public var flag: UIImage? {
-        return UIImage(named: flagName, in: Bundle(for: CountryPicker.self), compatibleWith: nil)
+        if let flagName = flagName {
+            return UIImage(named: flagName, in: Bundle(for: CountryPicker.self), compatibleWith: nil)
+        }
+        return nil
     }
 }
 
