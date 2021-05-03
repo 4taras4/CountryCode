@@ -18,8 +18,8 @@ import UIKit
 ///   - countryCode: Country code shortcut
 ///   - phoneCode: Phone digit code of country
 ///   - flag: Flag of country
-@objc public protocol CountryPickerDelegate {
-    @objc func countryPhoneCodePicker(_ picker: CountryPicker, didSelectCountryWithName name: String, countryCode: String, phoneCode: String, flag: UIImage)
+public protocol CountryPickerDelegate {
+    func countryPhoneCodePicker(_ picker: CountryPicker, didSelect country: Country)
 }
 
 /// Structure of country code picker
@@ -50,8 +50,8 @@ public struct Country {
 
 public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
     open var currentCountry: Country?
-    @objc public var displayOnlyCountriesWithCodes: [String]?
-    @objc public var exeptCountriesWithCodes: [String]?
+    public var displayOnlyCountriesWithCodes: [String]?
+    public var exeptCountriesWithCodes: [String]?
 
     var countries: [Country] {
         let allCountries: [Country] = CountryPicker.countryNamesByCode()
@@ -65,8 +65,8 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         }
         return allCountries
     }
-    @objc public weak var countryPickerDelegate: CountryPickerDelegate?
-    @objc public var showPhoneNumbers: Bool = false
+    public var countryPickerDelegate: CountryPickerDelegate?
+    public var showPhoneNumbers: Bool = false
     open var theme: CountryViewTheme?
 
     init() {
@@ -116,8 +116,9 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         selectRow(row, inComponent: 0, animated: true)
         let country = countries[row]
         currentCountry = country
-        if let countryPickerDelegate = countryPickerDelegate {
-            countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+        if let country = country,
+           let countryPickerDelegate = countryPickerDelegate {
+            countryPickerDelegate.countryPhoneCodePicker(self, didSelect: country)
         }
     }
 
@@ -137,8 +138,9 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         selectRow(row, inComponent: 0, animated: true)
         let country = countries[row]
         currentCountry = country
-        if let countryPickerDelegate = countryPickerDelegate {
-            countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+        if let country = country,
+           let countryPickerDelegate = countryPickerDelegate {
+            countryPickerDelegate.countryPhoneCodePicker(self, didSelect: country)
         }
     }
 
@@ -227,11 +229,11 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     ///   - pickerView: CountryPickerView
     ///   - row: selectedRow
     ///   - component: description
-    @objc open func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    open func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         let country = countries[row]
         currentCountry = country
         if let countryPickerDelegate = countryPickerDelegate {
-            countryPickerDelegate.countryPhoneCodePicker(self, didSelectCountryWithName: country.name!, countryCode: country.code!, phoneCode: country.phoneCode!, flag: country.flag!)
+            countryPickerDelegate.countryPhoneCodePicker(self, didSelect: country)
         }
     }
 
