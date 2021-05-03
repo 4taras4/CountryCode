@@ -6,9 +6,9 @@
 //  Copyright © 2016 Taras Markevych. All rights reserved.
 //
 
+import CoreTelephony
 import Foundation
 import UIKit
-import CoreTelephony
 
 /// CountryPickerDelegate
 ///
@@ -49,7 +49,7 @@ public struct Country {
 }
 
 public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewDataSource, UIGestureRecognizerDelegate {
-    open var currentCountry: Country? = nil
+    open var currentCountry: Country?
     @objc public var displayOnlyCountriesWithCodes: [String]?
     @objc public var exeptCountriesWithCodes: [String]?
 
@@ -69,7 +69,6 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     @objc public var showPhoneNumbers: Bool = false
     open var theme: CountryViewTheme?
 
-
     init() {
         super.init(frame: .zero)
         setup()
@@ -83,7 +82,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         setup()
     }
 
-    required public init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
     }
@@ -96,7 +95,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         let tap = UITapGestureRecognizer(target: self, action: #selector(pickerTapped(tapRecognizer:)))
         tap.cancelsTouchesInView = false
         tap.delegate = self
-        self.addGestureRecognizer(tap)
+        addGestureRecognizer(tap)
     }
 
     // MARK: - Country Methods
@@ -106,7 +105,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     /// - Parameter code: selected country
     public func setCountry(_ code: String) {
         var row = 0
-        for index in 0..<countries.count {
+        for index in 0 ..< countries.count {
             if countries[index].code == code {
                 row = index
                 currentCountry = countries[index]
@@ -114,7 +113,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
             }
         }
 
-        self.selectRow(row, inComponent: 0, animated: true)
+        selectRow(row, inComponent: 0, animated: true)
         let country = countries[row]
         currentCountry = country
         if let countryPickerDelegate = countryPickerDelegate {
@@ -127,7 +126,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     /// - Parameter phoneCode: String
     public func setCountryByPhoneCode(_ phoneCode: String) {
         var row = 0
-        for index in 0..<countries.count {
+        for index in 0 ..< countries.count {
             if countries[index].phoneCode == phoneCode {
                 row = index
                 currentCountry = countries[index]
@@ -135,7 +134,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
             }
         }
 
-        self.selectRow(row, inComponent: 0, animated: true)
+        selectRow(row, inComponent: 0, animated: true)
         let country = countries[row]
         currentCountry = country
         if let countryPickerDelegate = countryPickerDelegate {
@@ -157,9 +156,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
 
         do {
             if let jsonObjects = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.allowFragments) as? NSArray {
-
                 for jsonObject in jsonObjects {
-
                     guard let countryObj = jsonObject as? NSDictionary else {
                         return countries
                     }
@@ -173,7 +170,6 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
                     let country = Country(code: code, name: name, phoneCode: phoneCode, flagName: flagName)
                     countries.append(country)
                 }
-
             }
         } catch {
             return countries
@@ -241,18 +237,17 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
 
     @objc
     func pickerTapped(tapRecognizer: UITapGestureRecognizer) {
-        if (tapRecognizer.state == .ended) {
-            let rowHeight: CGFloat = self.rowSize(forComponent: 0).height
-            let selectedRowFrame: CGRect = self.bounds.insetBy(dx: 0, dy: (self.frame.height - rowHeight) / 2.0)
+        if tapRecognizer.state == .ended {
+            let rowHeight: CGFloat = rowSize(forComponent: 0).height
+            let selectedRowFrame: CGRect = bounds.insetBy(dx: 0, dy: (frame.height - rowHeight) / 2.0)
             let userTappedOnSelectedRow = selectedRowFrame.contains(tapRecognizer.location(in: self))
-            if (userTappedOnSelectedRow) {
-                self.pickerView(self, didSelectRow: self.selectedRow(inComponent: 0), inComponent: 0)
+            if userTappedOnSelectedRow {
+                pickerView(self, didSelectRow: selectedRow(inComponent: 0), inComponent: 0)
             }
         }
     }
 
-    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool{
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
-
 }
