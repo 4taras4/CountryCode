@@ -297,7 +297,7 @@ private extension CountryPicker {
         }
         if let display = exeptCountriesWithCodes {
             // Filtering `display codes` from local storage
-            let filteredCodes = Set(allCountriesCode).intersection(display)
+            let filteredCodes = Set(allCountriesCode).subtracting(display)
             // Filtering countries
             updateCountryList(with: filteredCodes)
         }
