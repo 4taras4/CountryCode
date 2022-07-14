@@ -81,15 +81,8 @@ end
 You can use [The Swift Package Manager](https://swift.org/package-manager) to install `CountryPicker` by adding the proper description to your `Package.swift` file:
 
 ```swift
-import PackageDescription
+Add package:     https://github.com/4taras4/CountryCode
 
-let package = Package(
-    name: "YOUR_PROJECT_NAME",
-    targets: [],
-    dependencies: [
-        .Package(url: "git@github.com:4taras4/CountryCode.git")
-    ]
-)
 ```
 
 Note that the [Swift Package Manager](https://swift.org/package-manager) is still in early design and development, for more information checkout its [GitHub Page](https://github.com/apple/swift-package-manager)
