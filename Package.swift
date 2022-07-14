@@ -25,8 +25,8 @@ let package = Package(
             name: "CountryPicker",
             dependencies: [],
             exclude:[],
-            path: "CountryPicker",
-            resources: [ .process("CountryPicker")]),
+            path: "CountryPicker/Classes",
+            resources: [ .process("CountryPicker/Assets")]),
         .testTarget(
             name: "CountryPickerTests",
             dependencies: ["CountryPicker"]),
