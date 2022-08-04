@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CountryPickerSwift'
-  s.version          = '1.8.2'
+  s.version          = '1.8.3'
   s.summary          = 'Swift CountryPicker'
 
 # This description is used to generate tags and improve search results.
