@@ -44,7 +44,12 @@ public struct Country {
     }
     
     public var flag: UIImage? {
-        return UIImage(named: flagName, in: Bundle(for: CountryPicker.self), compatibleWith: nil)
+        #if SWIFT_PACKAGE
+        let bundle = Bundle.module
+        #else
+        let bundle = Bundle(for: CountryPicker.self)
+        #endif
+        return UIImage(named: flagName, in: bundle, compatibleWith: nil)
     }
 }
 

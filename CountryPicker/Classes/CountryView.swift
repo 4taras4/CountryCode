@@ -43,7 +43,11 @@ class NibLoadingView: UIView {
     ///
     /// - Returns: XIBView
     fileprivate func loadViewFromNib() -> UIView {
+        #if SWIFT_PACKAGE
+        let bundle = Bundle.module
+        #else
         let bundle = Bundle(for: type(of: self))
+        #endif
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
         let nibView = nib.instantiate(withOwner: self, options: nil).first as! UIView
         
