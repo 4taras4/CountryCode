@@ -44,11 +44,11 @@ public struct Country {
     }
     
     public var flag: UIImage? {
-        #if SWIFT_PACKAGE
+#if SWIFT_PACKAGE
         let bundle = Bundle.module
-        #else
+#else
         let bundle = Bundle(for: CountryPicker.self)
-        #endif
+#endif
         return UIImage(named: flagName, in: bundle, compatibleWith: nil)
     }
 }
@@ -79,7 +79,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
             setupCountry()
         }
     }
-
+    
     //Countries list to be shown
     private var countries: [Country] = Array(CountryPicker.countryNamesByCode())
     
@@ -164,7 +164,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
                 break
             }
         }
-
+        
         self.selectRow(row, inComponent: 0, animated: true)
         let country = countries[row]
         currentCountry = country
@@ -180,7 +180,11 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
     /// - Returns: sorted array with all information phone, flag, name
     private static func countryNamesByCode() -> Set<Country> {
         var countries = Set<Country>()
+#if SWIFT_PACKAGE
+        let frameworkBundle = Bundle.module
+#else
         let frameworkBundle = Bundle(for: self)
+#endif
         guard let jsonPath = frameworkBundle.path(forResource: "CountryPicker.bundle/Data/countryCodes", ofType: "json"), let jsonData = try? Data(contentsOf: URL(fileURLWithPath: jsonPath)) else {
             return countries
         }
@@ -249,7 +253,7 @@ public class CountryPicker: UIPickerView, UIPickerViewDelegate, UIPickerViewData
         } else {
             resultView = view as! CountryView
         }
-
+        
         resultView.setup(countries[row])
         if !showPhoneNumbers {
             resultView.countryCodeLabel.isHidden = true
